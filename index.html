@@ -3,8 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Home</title>
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>This is what you should try to type.</h1>
+    <!--Make sure the form has the autocomplete function switched off:-->
+    <form autocomplete="off" action="/action_page.php">
+      <div class="autocomplete" style="width:300px;">
+        <input id="myInput" type="text" name="myCountry" placeholder="Country">
+      </div>
+      <input type="submit">
+    </form>
+    <script type="text/javascript" src="index.js">
+      var countries = [
+        "This is what you should try to type.",
+        "But you could also type this,",
+        "Or this,",
+        "Or even this, really.",
+        "Honestly, embrace your inner chaos:",
+        "Type this.",
+        "But, like, you know-",
+        "Only if you want to."
+      ];
+      autocomplete(document.getElementById("myInput"), countries);
+    </script> 
   </body>
 </html>
