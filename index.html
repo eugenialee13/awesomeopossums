@@ -6,16 +6,31 @@
   <title>Awesome Opossum</title>
 </head>   
 <body>
-  <h2>
-    Awesom Opossum Autocomplete project
-  </h2>
-  <div class="menu">
-    <a href="ac1.html">
-      link to mouse autocomplete test
-    </a>
-    <a href="ac2.html">
-      link to keyboard autocomplete test
-    </a>
-  </div>
+  <h1>Click button to begin test</h1>
+  <button type="button" onclick=randomizeOrder()>START</button>
+  <p>Take First:</p>
+  <p id="1"></p>
+  <p>Take Second:</p>
+  <p id="2"></p>
+  <script>
+    function randomizeOrder() {
+      var ids = ["1", "2"];
+      var links = 
+          ['<a href="ac1.html"> link to mouse autocomplete test </a>',
+           '<a href="ac2.html"> link to keyboard autocomplete test </a>'];
+      var i = 0;
+      var rand;
+      
+      while (i < ids.length) {
+        rand = (Math.random()*ids.length);
+        
+        if (links[rand] != "chosen") {
+          document.getElementById(ids[i]).innerHTML = links[rand];
+          links[rand] = "chosen";
+          i++
+        }
+      }
+    }
+  </script>
 </body>
 </html>
