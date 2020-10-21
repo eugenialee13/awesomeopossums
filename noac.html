@@ -9,11 +9,13 @@
   <h1>
     No Autocomplete Test!
   </h1>
-  <button type="button" onclick="nextTest()">CLICK TO INITIALIZE</button>
+  <p id="buttoncont"
+    <button id="startbutton" type="button" onclick="initTest()">CLICK TO INITIALIZE</button>
+  </p>
   <h2 id="etf"></h2>
   <p id="totype"></p>
   <form>
-    <textarea rows="10" cols= "150" name="insert"></textarea>
+    <textarea id="theform" rows="10" cols= "150" name="insert"></textarea>
     <br>
     <input type="submit" value="Submit" onclick="nextTest()">
   </form>
@@ -21,29 +23,47 @@
     var opts =
         [{code: "This is just a test</br>Im not sure",
           complete: "no",
+          result: "",
           time: 0
          },
          {code: "this is so its balanced lol",
           complete: "no",
+          result: "",
           time: 0
          },
          {code: "test to see what happens with three",
           complete: "no",
+          result: "",
           time: 0
          }];
     
-    function nextTest() {
+    var rand;
+    
+    function initTest() {
       document.getElementById("etf").innerHTML = "Please type the following";
+      document.getElementbyId("buttoncont".innerHTML = " ";
       
-      var rand = Math.floor(Math.random()*opts.length);
+      nextText();
+      
+    }
+    
+    function nextText() {
+      rand = Math.floor(Math.random()*opts.length);
       
       if (opts[rand].complete == "no") {
         document.getElementById("totype").innerHTML = opts[rand].code;
         opts[rand].complete = "yes";
       } else {
-        nextTest();
+        nextText();
       }
     }
+    
+    function nextTest() {
+      
+      opts[rand] = document.getElementById("theform").value;
+      
+      nextText();
+    }  
   </script>
 </body>
 </html>  
