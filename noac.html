@@ -35,7 +35,7 @@
       var rand = Math.floor(Math.random()*opts.length);
       
       if (opts[rand].complete == "no") {
-        document.getElementByIde("totype").innerHTML = opts[rand].code;
+        document.getElementById("totype").innerHTML = opts[rand].code;
         opts[rand].complete = "yes";
       } else {
         nextTest();
