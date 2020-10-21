@@ -14,11 +14,13 @@
   </p>
   <h2 id="etf"></h2>
   <p id="totype"></p>
-  <form>
-    <textarea id="theform" rows="10" cols= "150" name="insert"></textarea>
-    <br>
-    <button type="button" value="Submit" onclick="nextTest()">SUBMIT</button>
-  </form>
+  <p id ="formloc">
+    <form>
+      <textarea id="theform" rows="10" cols= "150" name="insert"></textarea>
+      <br>
+      <button type="button" value="Submit" onclick="nextTest()">SUBMIT</button>
+    </form>
+  </p>
   <script>
     var opts =
         [{code: "This is just a test</br>Im not sure",
@@ -82,7 +84,8 @@
     }
     
     function finishTest() {
-      
+      document.getElementById("etf").innerHTML = "";
+      document.getElementById("formloc").innerHTML = "";
     }
 
   </script>
