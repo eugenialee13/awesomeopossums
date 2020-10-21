@@ -32,7 +32,7 @@
     function nextTest() {
       document.getElementById("etf").innerHTML = "Please type the following";
       
-      var rand = Math.floor(Math.random()*options.length);
+      var rand = Math.floor(Math.random()*opts.length);
       
       if (opts[rand].complete == "no") {
         document.getElementByIde("totype").innerHTML = opts[rand].code;
