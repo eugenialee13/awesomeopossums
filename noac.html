@@ -26,17 +26,20 @@
         [{code: "This is just a test</br>Im not sure",
           complete: "no",
           result: "",
-          time: 0
+          time: 0,
+          diff: 0
          },
          {code: "this is so its balanced lol",
           complete: "no",
           result: "",
-          time: 0
+          time: 0,
+          diff: 0
          },
          {code: "test to see what happens with three",
           complete: "no",
           result: "",
-          time: 0
+          time: 0,
+          diff: 0
          }];
     
     var rand;
@@ -72,9 +75,11 @@
             
     function nextTest() {
       
-      opts[rand] = document.getElementById("theform").value;
+      opts[rand].result = document.getElementById("theform").value;
       
-      opts[rand] = document.getElementById("theform").value = "";
+      opts[rand].diff = measureDifference();
+      
+      document.getElementById("theform").value = "";
       
       if (checkOpts() == 1) {
         nextText();
@@ -83,10 +88,32 @@
       }
     }
     
+    function measureDifference() {
+      var str1 = (opts[rand].code).split('');
+      var str2 = (opts[rand].result).split('');
+      var counter = 0;
+      var i;
+      var max;
+      
+      if (length.str1 > length.str2) {
+        max = length.str;
+      } else {
+        max = length.str2;
+      }
+      
+      for(i = 0; i < max; i++) {
+        if (str1[i] == str2[i]) {
+        } else {
+          counter = counter + 1;
+        }
+      }
+      return counter;
+    }
+    
     function finishTest() {
       document.getElementById("etf").innerHTML = "Test Complete! Data below:";
       document.getElementById("formloc").innerHTML = "";
-      document.getElementById("totype").innerHTML = "";
+      document.getElementById("totype").innerHTML = opts[1].diff;
       document.getElementById("formloc2").innerHTML = "";
     }
 
