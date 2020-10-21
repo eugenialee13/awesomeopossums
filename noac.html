@@ -23,7 +23,7 @@
   </p>
   <script>
     var opts =
-        [{code: "This is just a test</br>Im not sure",
+        [{code: "This is just a test<br>Im not sure",
           complete: "no",
           result: "",
           time: 0,
@@ -89,7 +89,7 @@
     }
     
     function measureDifference() {
-      var str1 = (opts[rand].code).split(/<\\br>| |/);
+      var str1 = (opts[rand].code).split(/<br>| |/);
       var str2 = (opts[rand].result).split(/ |/);
       var counter = 0;
       var i;
