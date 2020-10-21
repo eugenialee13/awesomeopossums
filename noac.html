@@ -7,10 +7,40 @@
 </head>   
 <body>
   <h1>
-    hi
+    No Autocomplete Test!
   </h1>
-  <p>
-    This is some text</br>idk</br>let's see
-  </p>
+  <button type="button" onclick="nextTest()">CLICK TO INITIALIZE</button>
+  <h2 id="etf"></h2>
+  <p id="totype"></p>
+  <form>
+    <div class="autocomplete" style="width:300px">
+      <input id="myInput" type="text" name="codeSubmit" placeholder="Type Code Here">
+    </div>
+    <input type="submit" onclick="nextTest()">
+  </form>
+  <script>
+    var opts =
+        [{code: "This is just a test</br>Im not sure",
+          complete: "no",
+          time: 0
+         },
+         {code: "this is so its balanced lol",
+          complete: "no",
+          time: 0
+         }];
+    
+    function nextTest() {
+      document.getElementById("etf").innerHTML = Please type the following ;
+      
+      var rand = Math.floor(Math.random()*options.length);
+      
+      if (opts[rand].complete == "no") {
+        document.getElementByIde("totype").innerHTML = opts[rand].code;
+        opts[rand].complete = "yes";
+      } else {
+        nextTest();
+      }
+    }
+        
 </body>
 </html>  
