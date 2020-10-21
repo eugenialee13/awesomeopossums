@@ -58,14 +58,33 @@
       }
     }
     
+    function checkOpts() {
+      var i;
+      for(i = 0; i < opts.length; i++) {
+        if (opts[i].complete == "no") {
+            return 1;
+        }
+        return 0;
+      }
+    }
+            
     function nextTest() {
       
       opts[rand] = document.getElementById("theform").value;
       
       opts[rand] = document.getElementById("theform").value = "";
       
-      nextText();
-    }  
+      if (checkOpts() == 1) {
+        nextText();
+      } else {
+        finishTest();
+      }
+    }
+    
+    function finishTest() {
+      
+    }
+
   </script>
 </body>
 </html>  
