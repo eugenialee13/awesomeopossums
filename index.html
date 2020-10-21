@@ -22,7 +22,7 @@
       var rand;
       
       while (i < ids.length) {
-        rand = (Math.random()*ids.length);
+        rand = Math.floor(Math.random()*ids.length);
         
         if (links[rand] != "chosen") {
           document.getElementById(ids[i]).innerHTML = links[rand];
