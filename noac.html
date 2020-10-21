@@ -95,16 +95,16 @@
       var i;
       var max;
       
-      if (length.str1 > length.str2) {
-        max = length.str1;
+      if (str1.length > str2.length) {
+        max = str1.length;
       } else {
-        max = length.str2;
+        max = str2.length;
       }
       
       for(i = 0; i < max; i++) {
-        if (str1[i] == str2[i]) {
+        if (str1[i] != str2[i]) {
+          counter++;
         } else {
-          counter = counter + 1;
         }
       }
       return counter;
