@@ -17,7 +17,7 @@
   <form>
     <textarea id="theform" rows="10" cols= "150" name="insert"></textarea>
     <br>
-    <button type="button" value="Submit" onclick="nextTest()">
+    <button type="button" value="Submit" onclick="nextTest()">SUBMIT</button>
   </form>
   <script>
     var opts =
@@ -61,6 +61,8 @@
     function nextTest() {
       
       opts[rand] = document.getElementById("theform").value;
+      
+      opts[rand] = document.getElementById("theform".value = "";
       
       nextText();
     }  
