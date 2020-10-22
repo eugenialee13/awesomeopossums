@@ -24,12 +24,14 @@
   <script>
     var opts =
         [{code: "<span style='color:gray'>elif l1.val< l2.val:</span><br><span style='color:black'><b>l1.next = self.mergeTwoLists(l1.next, 12)</b></span><br><span style='color:gray'>return l1<br>else:<br>l2.next = self.mergeTwoLists(l1, l2.next)</span>",
+          typed: "l1.next = self.mergeTwoLists(l1.next, 12)",
           result: " ",
           time: 0,
           diff: 0,
           complete: "no"
           },
          {code: "blah blah blah",
+          typed: " ",
           result: " ",
           time: 0,
           diff: 0,
@@ -83,8 +85,8 @@
     }
     
     function measureDifference() {
-      var str1 = (opts[rand].code).split('');
-      var str2 = (opts[rand].result).split('');
+      var str1 = (opts[rand].typed).split(' |');
+      var str2 = (opts[rand].result).split(' |');
       var counter = 0;
       var i;
       var max;
