@@ -31,6 +31,10 @@
   <p id="8"></p>
   <p id="9"></p>
   <p id="10"></p>
+  <p>Take next (unless already taken)</p>
+  <p id = "next"></p>
+  <p>Take last (unless taken, then you are done!)</p>
+  <p id = "last"></p>
   <script>
     var opts =
         [{code: "<span style='color:gray'>elif l1.val< l2.val:</span><br><span style='color:black'><b>l1.next = self.mergeTwoLists(l1.next, 12)</b></span><br><span style='color:gray'>return l1<br>else:<br>l2.next = self.mergeTwoLists(l1, l2.next)</span>",
@@ -195,6 +199,22 @@
       
       for(i = 0; i < opts.length; i++) {
         document.getElementById(opts[i].id).innerHTML = idstr.concat(opts[i].id, timestr, (opts[i].time).toString(), diffstr, (opts[i].diff).toString());
+      }
+      
+      var ids = ["next", "last"];
+      var links =
+          ['<a href="ac1.html"> Mouse Autocomplete Test </a>',
+           '<a href="ac2.html"> Keyboard Autocomplete Test </a>'
+           ];
+      i = 0;
+      while (i < ids.length) {
+        rand = Math.floor(Math.random()*ids.length);
+        
+        if (links[rand] != "chosen") {
+          document.getElementById(ids[i]).innerHTML = links[rand];
+          links[rand] = "chosen";
+          i++
+        }
       }
     }
 
