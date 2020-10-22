@@ -23,24 +23,17 @@
   </p>
   <script>
     var opts =
-        [{code: "This is just a test<br>Im not sure",
-          complete: "no",
-          result: "",
-          time: 0,
-          diff: 0
-         },
-         {code: "this is so its balanced lol",
-          complete: "no",
-          result: "",
-          time: 0,
-          diff: 0
-         },
-         {code: "test to see what happens with three",
-          complete: "no",
-          result: "",
-          time: 0,
-          diff: 0
-         }];
+        [
+          {code:
+           "<span style='color:gray'>elif l1.val< l2.val:<br></span><span style='color:black:>l1.next = self.mergeTwoLists(l1.next, 12)</span><br><span style='color:gray'>return l1<br>else:<br>l2.next = self.mergeTwoLists(l1, l2.next)</span>"
+            ,
+           result: " ",
+           time: 0,
+           diff: 0
+          }
+          ]
+  
+            
     
     var rand;
     
@@ -89,8 +82,8 @@
     }
     
     function measureDifference() {
-      var str1 = (opts[rand].code).split(/<br>| |/);
-      var str2 = (opts[rand].result).split(/ |/);
+      var str1 = (opts[rand].code).split('');
+      var str2 = (opts[rand].result).split('');
       var counter = 0;
       var i;
       var max;
@@ -112,9 +105,9 @@
     
     function finishTest() {
       document.getElementById("etf").innerHTML = "Test Complete! Data below:";
-      document.getElementById("formloc").innerHTML = opts[1].result;
+      document.getElementById("formloc").innerHTML = opts[0].result;
       document.getElementById("totype").innerHTML = opts[0].diff;
-      document.getElementById("formloc2").innerHTML = opts[1].code;
+      document.getElementById("formloc2").innerHTML = opts[0].code;
     }
 
   </script>
