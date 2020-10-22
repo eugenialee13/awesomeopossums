@@ -187,6 +187,12 @@
       var idstr = "ID: ";
       var timestr = ", TIME: ";
       var diffstr = ", DIFFERENCES: ";
+      
+      document.getElementById("etf").innerHTML = "Test Complete! Data below:";
+      document.getElementById("formloc").innerHTML = "";
+      document.getElementById("totype").innerHTML = "";
+      document.getElementById("formloc2").innerHTML = "";
+      
       for(i = 0; i < opts.length; i++) {
         document.getElementById(opts[i].id).innerHTML = idstr.concat(opts[i].id, timestr, (opts[i].time).toString(), diffstr, (opts[i].diff).toString());
       }
