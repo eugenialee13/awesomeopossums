@@ -15,8 +15,10 @@
   <h2 id="etf"></h2>
   <p id="totype"></p>
   <p id ="formloc">
-    <form id="formloc2">
-      <textarea id="theform" rows="10" cols= "150" name="insert"></textarea>
+    <form id="formloc2" autocomplete="off">
+      <div class="autocomplete" style="width:300px;">
+         <input id="myInput" type="text" name="input" placeholder="Code here!">
+      </div>
       <br>
       <button type="button" value="Submit" onclick="nextTest()">SUBMIT</button>
     </form>
