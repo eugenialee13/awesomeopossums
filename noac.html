@@ -40,7 +40,7 @@
           id: "2"
          },
          {code: "<span style='color:gray'>pre, numStrs, shortest = str(), len(strs), len(min(strs, key=len))<br></span><span style='color:black'><b>for i in range(shortest):</b><br></span><span style='color:gray'>s = strs[0][i]<br>for j in range(1, numStrs):<br>if ord(strs[j][i]) ^ ord(s): return pre<br>pre +=s</span>",
-          type: "for i in range(shortest):",
+          typed: "for i in range(shortest):",
           result: " ",
           time: 0,
           diff: 0,
@@ -51,7 +51,7 @@
     var rand;
     
     function initTest() {
-      document.getElementById("etf").innerHTML = "Please type the following";
+      document.getElementById("etf").innerHTML = "Please type the highlighted statement below:";
       document.getElementById("buttoncont").innerHTML = " ";
       
       nextText();
