@@ -44,7 +44,7 @@
         // Define that the event name is 'build'.
         event.initEvent('build', true, true);
     function autocomplete(inp, arr) {
-        console.log('inside autocomplete function');
+      console.log("looking at version :)");
         /*the autocomplete function takes two arguments,
         the text field element and an array of possible autocompleted values:*/
         var currentFocus;
@@ -54,6 +54,8 @@
             /*close any already open lists of autocompleted values*/
             closeAllLists();
             if (!val) { return false;}
+            val = val.split(" ");
+            val = val[val.length - 1];
             currentFocus = -1;
             /*create a DIV element that will contain the items (values):*/
             a = document.createElement("DIV");
@@ -74,11 +76,13 @@
                 b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
                 /*execute a function when someone clicks on the item value (DIV element):*/
                 // Listen for the event.
-b.addEventListener('build', function (e) {
-  console.log('inside custom event handler');
-  console.log('inside event handler');
+                b.addEventListener('build', function (e) {
+                    results = inp.value.split(" ");
+                    results.splice(-1, 1);
+                    results.push(this.getElementsByTagName("input")[0].value);
+                    res = results.join(' ');
                     /*insert the value for the autocomplete text field:*/
-                    inp.value = this.getElementsByTagName("input")[0].value;
+                    inp.value = res;
                     /*close the list of autocompleted values,
                     (or any other open lists of autocompleted values:*/
                     closeAllLists();
@@ -144,7 +148,7 @@ b.addEventListener('build', function (e) {
     /*An array containing all the country names in the world:*/
     // TODO: REPLACE ONCE CODE MERGED
     //var options = opts[rand].suggest;
-    var options = ['balh', 'variable', 'var', 'breakfast', 'second breakfast', 'elevensies', 'teatime', "they're taking the hobbits to isengaurd"];
+    var options = ['breakfast', 'second breakfast', 'elevensies', 'teatime', "they're taking the hobbits to isengaurd"];
     /*initiate the autocomplete function on the "myInput" element, and pass along the options array as possible autocomplete values:*/
     autocomplete(document.getElementById("myInput"), options);
   

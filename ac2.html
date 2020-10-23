@@ -24,7 +24,7 @@
     </form>
     <script>
     function autocomplete(inp, arr) {
-        console.log('inside autocomplete function');
+        console.log('inside tab autocomplete function');
         /*the autocomplete function takes two arguments,
         the text field element and an array of possible autocompleted values:*/
         var currentFocus;
@@ -44,6 +44,8 @@
             /*for each item in the array...*/
             for (i = 0; i < arr.length; i++) {
             /*check if the item starts with the same letters as the text field value:*/
+            console.log(arr[i].substr(0, val.length).toUpperCase());
+            console.log(val.toUpperCase());
             if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
                 /*create a DIV element for each matching element:*/
                 b = document.createElement("DIV");
