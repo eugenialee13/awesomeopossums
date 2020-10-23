@@ -9,19 +9,35 @@
     <h1>
         Mouse Autocomplete
     </h1>
-    <h2>
-        Please type the following:
-    </h2>
-    <p>
-        var c = 30;
-    </p>
-    <!--Make sure the form has the autocomplete function switched off:-->
-    <form autocomplete="off">
-        <div class="autocomplete" style="width:300px;">
-            <input id="myInput" type="text" name="myCountry" placeholder="Country">
-        </div>
-        <input type="submit">
+  <p id="buttoncont">
+    <button id="startbutton" type="button" onclick="initTest()">CLICK TO INITIALIZE</button>
+  </p>
+  <h2 id="etf"></h2>
+  <p id="totype"></p>
+  <p id ="formloc">
+    <form id="formloc2" autocomplete="off">
+      <div class="autocomplete" style="width:300px;">
+         <input id="myInput" type="text" name="input" placeholder="Code here!">
+      </div>
+      <button type="button" value="Submit" onclick="nextTest()">SUBMIT</button>
     </form>
+  </p>
+  <p id="1"></p>
+  <p id="2"></p>
+  <p id="3"></p>
+  <p id="4"></p>
+  <p id="5"></p>
+  <p id="6"></p>
+  <p id="7"></p>
+  <p id="8"></p>
+  <p id="9"></p>
+  <p id="10"></p>
+  <p id = "nexttext"></p>
+  <p id = "next"></p>
+  <p id = "lasttext"></p>
+  <p id = "last"></p>
+  <p id = "formtext"></p>
+  <p id = "finalform"></p>
     <script>
     function autocomplete(inp, arr) {
         console.log('inside autocomplete function');
@@ -104,6 +120,210 @@
     ];
     /*initiate the autocomplete function on the "myInput" element, and pass along the options array as possible autocomplete values:*/
     autocomplete(document.getElementById("myInput"), options);
+      
+         var opts =
+        [{code: "<span style='color:gray'>elif L1.val< l2.val:</span><br><span style='color:black'><b>L1.next = self.mergeTwoLists(L1.next, 12)</b></span><br><span style='color:gray'>return L1<br>else:<br>l2.next = self.mergeTwoLists(L1, l2.next)</span>",
+          typed: "L1.next = self.mergeTwoLists(L1.next, 12)",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "1"
+          },
+         {code: "<span style='color:gray'>for char in s:<br>if char!= ']': stack.append(char)<br>else:<br>while no stack[-1].isdigit(): e_str = stack.pop() + e_str<br></span><span style='color:black'><b>while stack and stack[-1].isdigit(): k = stack.pop() + k</b></span><br><span style='color:gray'>e_str, k = e_str.strip('['), int(k)<br>stack.append(k.e_str)</span>",
+          typed: "while stack and stack[-1].isdigit(): k = stack.pop() + k",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "2"
+         },
+         {code: "<span style='color:gray'>pre, numStrs, shortest = str(), len(strs), len(min(strs, key=len))<br></span><span style='color:black'><b>for i in range(shortest):</b><br></span><span style='color:gray'>s = strs[0][i]<br>for j in range(1, numStrs):<br>if ord(strs[j][i]) ^ ord(s): return pre<br>pre +=s</span>",
+          typed: "for i in range(shortest):",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "3"
+         },
+         {code: "<span style='color:gray'>from math import factorial<br>class Solution:<br>def uniquePaths(self, m: int, n: int) -> int:<br>m, n = m - 1, n - 1<br></span><span style='color:black'><b>return math.factorial(n + m) // (math.factorial(n) * math.factorial(m))</b></span>",
+          typed: "return math.factorial(n + m) // (math.factorial(n) * math.factorial(m))",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "4"
+         },
+         {code: "<span style='color:gray'>class Solution:<br>def isPalindrome(self, s: str) -> bool:<br></span><span style='color:black'><b>s = ''.join([c for c in s if c.isalnum()]).lower()</b></span><br><span style='color:gray'>return all ([s[i] == s[~i] for i in range(len(s) // 2)])</span>",
+          typed: "s = ''.join([c for c in s if c.isalnum()]).lower()",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "5"
+         },         
+         {code: "<span style='color:gray'>s = set()<br>for n in nums:<br></span><span style='color:black'><b>if n in s: s.remove(n)</b></span><br><span style='color:gray'>else: s.add(n)<br><return s.pop()</span>",
+          typed: "if n in s: s.remove(n)",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "6"
+         },        
+         {code: "<span style='color:gray'>import heapq<br>freq, heap = collections.defaultdict(int), []<br>for n in nums: freq[n] += 1<br></span><span style='color:black'><b>for key, val in freq.items():</b></span><br><span style='color:gray'>if len(heap) < k: heapq.heappush(heap, (val,key))<br>else: heapq.heappushpop(heap, (val, key))<br>return [x[1] for x in heap]</span>",
+          typed: "for key, val in freq.items():",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "7"
+         },         
+         {code: "<span style='color:gray'>r = list()<br>for n in range(1, n+1):<br>if n % 15 == 0: r.append('FizzBuzz')<br></span><span style='color:black'><b>elif n % 5 == 0: r.append('Buzz')</b></span><br><span style='color:gray'>elif n % 3 == 0: r.append('Fizz')<br>else: r.append(str(n))</span>",
+          typed: "elif n % 5 == 0: r.append('Buzz')",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "8"
+         },         
+         {code: "<span style='color:gray'>index = key % self.size</span><br><span style='color:black'><b>if not self.map[index]: self.map[index] = list()</b><br></span><span style='color:gray'>val = self.get(key)<br>if val != -1: self.remove(key)<br>self.map[index].append((key, value))</span>",
+          typed: "if not self.map[index]: self.map[index] = list()",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "9"
+         },
+         {code: "<span style='color:gray'>happy_set = set()<br></span><span style='color:black'><b>while n > 1 and n not in happy_set:</b></span><br><span style='color:gray'>happy_set.add(n)<br>n = sum([int(x) ** 2 for x in list(str(n))])<br>return n == 1</span>",
+          typed: "while n > 1 and n not in happy_set:",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "10"
+         }];
+  
+    var rand;
+    
+    function initTest() {
+      document.getElementById("etf").innerHTML = "Please type the highlighted statement below and then click submit:";
+      document.getElementById("buttoncont").innerHTML = " ";
+      nextText();
+      
+    }
+    
+    function nextText() {
+      rand = Math.floor(Math.random()*opts.length);
+      
+      if (opts[rand].complete == "no") {
+        startTimer();
+        document.getElementById("totype").innerHTML = opts[rand].code;
+        opts[rand].complete = "yes";
+      } else {
+        nextText();
+      }
+    }
+    
+    function checkOpts() {
+      var i;
+      for(i = 0; i < opts.length; i++) {
+        if (opts[i].complete == "no") {
+            return 1;
+        }
+      }
+        return 0;
+    }
+            
+    function nextTest() {
+      
+      opts[rand].result = document.getElementById("myInput").value;
+      
+      opts[rand].diff = measureDifference();
+      opts[rand].time = stopTimer();
+      
+      document.getElementById("myInput").value = "";
+      
+      if (checkOpts() == 1) {
+        nextText();
+      } else {
+        finishTest();
+      }
+    }
+    
+    function measureDifference() {
+      var str1 = (opts[rand].typed).split(/ |/);
+      var str2 = (opts[rand].result).split(/ |/);
+      var counter = 0;
+      var i;
+      var max;
+      
+      if (str1.length > str2.length) {
+        max = str1.length;
+      } else {
+        max = str2.length;
+      }
+      
+      for(i = 0; i < max; i++) {
+        if (str1[i] != str2[i]) {
+          counter++;
+        } else {
+        }
+      }
+      return counter;
+    }
+
+    /* Timer template */
+    var startTime;
+    function startTimer() {
+      startTime = Date.now();
+    }
+    function stopTimer() {
+      if (startTime) {
+        var endTime = Date.now();
+        var difference = (endTime - startTime)/1000;
+        startTime = null;
+        return difference;
+      } else {
+          alert('Timer not yet started');
+      }
+    }
+    
+    function finishTest() {
+      var i;
+      var idstr = "ID: ";
+      var timestr = ", TIME: ";
+      var diffstr = ", DIFFERENCES: ";
+      
+      document.getElementById("etf").innerHTML = "Test Complete! Data below:";
+      document.getElementById("formloc").innerHTML = "";
+      document.getElementById("totype").innerHTML = "";
+      document.getElementById("formloc2").innerHTML = "";
+      document.getElementById("nexttext").innerHTML = "Take Next (unless taken, then move to last)";
+      document.getElementById("lasttext").innerHTML = "Take Last (unless taken, then take form)";
+      document.getElementById("formtext").innerHTML = "Closing Form:";
+      document.getElementById("finalform").innerHTML = '<a href="https://forms.gle/vTJvhg35c8DYeQP1A">Google Form!</a>';
+      
+      for(i = 0; i < opts.length; i++) {
+        document.getElementById(opts[i].id).innerHTML = idstr.concat(opts[i].id, timestr, (opts[i].time).toString(), " sec", diffstr, (opts[i].diff).toString());
+      }
+      
+      var ids = ["next", "last"];
+      var links =
+          ['<a href="ac1.html"> Mouse Autocomplete Test </a>',
+           '<a href="noac.html"> No Autocomplete Test </a>'
+           ];
+      i = 0;
+      while (i < ids.length) {
+        rand = Math.floor(Math.random()*ids.length);
+        
+        if (links[rand] != "chosen") {
+          document.getElementById(ids[i]).innerHTML = links[rand];
+          links[rand] = "chosen";
+          i++
+        }
+      }
+    }
+
   </script>
 </body>
 </html>
