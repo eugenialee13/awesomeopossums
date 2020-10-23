@@ -73,7 +73,7 @@
                 b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
                 /*execute a function when someone clicks on the item value (DIV element):*/
                 b.addEventListener("click", function(e) {
-                  results = inp.value.split(/ |[|(/);
+                  results = inp.value.split(/ |[/);
                     results.splice(-1, 1);
                     results.push(this.getElementsByTagName("input")[0].value);
                     res = results.join(' ');
