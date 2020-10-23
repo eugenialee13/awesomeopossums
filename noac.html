@@ -32,10 +32,12 @@
   <p id="8"></p>
   <p id="9"></p>
   <p id="10"></p>
-  <p>Take next (unless already taken)</p>
+  <p id = "nexttext"></p>
   <p id = "next"></p>
-  <p>Take last (unless taken, then you are done!)</p>
+  <p id = "lasttext">)</p>
   <p id = "last"></p>
+  <p id = "formtext"></p>
+  <p id = "finalform"></p>
   <script>
     var opts =
         [{code: "<span style='color:gray'>elif L1.val< l2.val:</span><br><span style='color:black'><b>L1.next = self.mergeTwoLists(L1.next, 12)</b></span><br><span style='color:gray'>return L1<br>else:<br>l2.next = self.mergeTwoLists(L1, l2.next)</span>",
@@ -214,6 +216,10 @@
       document.getElementById("formloc").innerHTML = "";
       document.getElementById("totype").innerHTML = "";
       document.getElementById("formloc2").innerHTML = "";
+      document.getElementById("nexttext").innerHTML = "Take Next (unless taken, then move to last)";
+      document.getElementById("lasttext").innerHTML = "Take Last (unless taken, then take form)";
+      document.getElementById("formtext").innerHTML = "Closing Form:";
+      document.getElementById("finalform").innerHTML = 'a href="https://forms.gle/vTJvhg35c8DYeQP1A">Google Form!</a>';
       
       for(i = 0; i < opts.length; i++) {
         document.getElementById(opts[i].id).innerHTML = idstr.concat(opts[i].id, timestr, (opts[i].time).toString(), " sec", diffstr, (opts[i].diff).toString());
