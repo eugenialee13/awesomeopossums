@@ -148,7 +148,7 @@
     /*An array containing all the country names in the world:*/
     // TODO: REPLACE ONCE CODE MERGED
     //var options = opts[rand].suggest;
-    var options = opts[rand].sugg;
+    var options = [];
     /*initiate the autocomplete function on the "myInput" element, and pass along the options array as possible autocomplete values:*/
     autocomplete(document.getElementById("myInput"), options);
   
@@ -260,6 +260,7 @@
         startTimer();
         document.getElementById("totype").innerHTML = opts[rand].code;
         opts[rand].complete = "yes";
+        options = opts[rand].sugg;
       } else {
         nextText();
       }
