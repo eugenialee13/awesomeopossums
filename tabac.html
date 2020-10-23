@@ -9,6 +9,7 @@
     <h1>
         Tab Autocomplete
     </h1>
+  <p id="instruct">Tab autocomplete: When code appears at the top of the page, type the bolded portion as quickly and accurately as you can. When an autocomplete option comes up, press tab to browse through your options and then enter to select an option. When you are finished with the bolded line, <b> CLICK SUBMIT. Do not press enter to submit. </b> Click the button below when you are ready </p>
   <p id="buttoncont">
     <button id="startbutton" type="button" onclick="initTest()">CLICK TO INITIALIZE</button>
   </p>
@@ -249,6 +250,7 @@
     function initTest() {
       document.getElementById("etf").innerHTML = "Please type the highlighted statement below and then click submit:";
       document.getElementById("buttoncont").innerHTML = " ";
+      document.getElementById("instruct").innerHTML = " ";
       nextText();
       
     }
