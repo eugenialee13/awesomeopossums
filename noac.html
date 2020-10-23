@@ -34,7 +34,7 @@
   <p id="10"></p>
   <p id = "nexttext"></p>
   <p id = "next"></p>
-  <p id = "lasttext">)</p>
+  <p id = "lasttext"></p>
   <p id = "last"></p>
   <p id = "formtext"></p>
   <p id = "finalform"></p>
@@ -219,7 +219,7 @@
       document.getElementById("nexttext").innerHTML = "Take Next (unless taken, then move to last)";
       document.getElementById("lasttext").innerHTML = "Take Last (unless taken, then take form)";
       document.getElementById("formtext").innerHTML = "Closing Form:";
-      document.getElementById("finalform").innerHTML = 'a href="https://forms.gle/vTJvhg35c8DYeQP1A">Google Form!</a>';
+      document.getElementById("finalform").innerHTML = '<a href="https://forms.gle/vTJvhg35c8DYeQP1A">Google Form!</a>';
       
       for(i = 0; i < opts.length; i++) {
         document.getElementById(opts[i].id).innerHTML = idstr.concat(opts[i].id, timestr, (opts[i].time).toString(), " sec", diffstr, (opts[i].diff).toString());
