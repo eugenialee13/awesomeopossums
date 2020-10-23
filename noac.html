@@ -37,22 +37,6 @@
   <p>Take last (unless taken, then you are done!)</p>
   <p id = "last"></p>
   <script>
-    /* Timer template */
-    var startTime;
-    function startButton() {
-      startTime = Date.now();
-    }
-    function stopButton() {
-      if (startTime) {
-        var endTime = Date.now();
-        var difference = endTime - startTime;
-        startTime = null;
-        return difference;
-      } else {
-          alert('Start button not yet started');
-      }
-    }
-    
     var opts =
         [{code: "<span style='color:gray'>elif l1.val< l2.val:</span><br><span style='color:black'><b>l1.next = self.mergeTwoLists(l1.next, 12)</b></span><br><span style='color:gray'>return l1<br>else:<br>l2.next = self.mergeTwoLists(l1, l2.next)</span>",
           typed: "l1.next = self.mergeTwoLists(l1.next, 12)",
@@ -140,7 +124,7 @@
     function initTest() {
       document.getElementById("etf").innerHTML = "Please type the highlighted statement below:";
       document.getElementById("buttoncont").innerHTML = " ";
-      
+      startButton();
       nextText();
       
     }
@@ -171,6 +155,7 @@
       opts[rand].result = document.getElementById("theform").value;
       
       opts[rand].diff = measureDifference();
+      opts[rand].time = stopButton();
       
       document.getElementById("theform").value = "";
       
@@ -201,6 +186,22 @@
         }
       }
       return counter;
+    }
+
+    /* Timer template */
+    var startTime;
+    function startButton() {
+      startTime = Date.now();
+    }
+    function stopButton() {
+      if (startTime) {
+        var endTime = Date.now();
+        var difference = endTime - startTime;
+        startTime = null;
+        return difference;
+      } else {
+          alert('Start button not yet started');
+      }
     }
     
     function finishTest() {
