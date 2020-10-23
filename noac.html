@@ -9,6 +9,7 @@
   <h1>
     No Autocomplete Test!
   </h1>
+  <p id="instruct"><b>INSTRUCTIONS:</b> “when code appears at the top of the page, type the bolded portion as quickly and accurately as you can and then <b> CLICK SUBMIT. Do not press enter to submit.</b> Click the button below when you are ready</p>
   <p id="buttoncont">
     <button id="startbutton" type="button" onclick="initTest()">CLICK TO INITIALIZE</button>
   </p>
@@ -126,6 +127,7 @@
     function initTest() {
       document.getElementById("etf").innerHTML = "Please type the highlighted statement below and then click submit:";
       document.getElementById("buttoncont").innerHTML = " ";
+      document.getElementById("instruct").innerHTML = " ";
       nextText();
       
     }
