@@ -122,9 +122,8 @@
     var rand;
     
     function initTest() {
-      document.getElementById("etf").innerHTML = "HI.Please type the highlighted statement below:";
+      document.getElementById("etf").innerHTML = "Please type the highlighted statement below:";
       document.getElementById("buttoncont").innerHTML = " ";
-      startButton();
       nextText();
       
     }
@@ -133,6 +132,7 @@
       rand = Math.floor(Math.random()*opts.length);
       
       if (opts[rand].complete == "no") {
+        startButton();
         document.getElementById("totype").innerHTML = opts[rand].code;
         opts[rand].complete = "yes";
       } else {
