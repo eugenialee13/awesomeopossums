@@ -132,7 +132,7 @@
       rand = Math.floor(Math.random()*opts.length);
       
       if (opts[rand].complete == "no") {
-        startButton();
+        startTimer();
         document.getElementById("totype").innerHTML = opts[rand].code;
         opts[rand].complete = "yes";
       } else {
@@ -155,7 +155,7 @@
       opts[rand].result = document.getElementById("myInput").value;
       
       opts[rand].diff = measureDifference();
-      opts[rand].time = stopButton();
+      opts[rand].time = stopTimer();
       
       document.getElementById("myInput").value = "";
       
@@ -190,17 +190,17 @@
 
     /* Timer template */
     var startTime;
-    function startButton() {
+    function startTimer() {
       startTime = Date.now();
     }
-    function stopButton() {
+    function stopTimer() {
       if (startTime) {
         var endTime = Date.now();
         var difference = (endTime - startTime)/1000;
         startTime = null;
         return difference;
       } else {
-          alert('Start button not yet started');
+          alert('Timer not yet started');
       }
     }
     
