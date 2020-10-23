@@ -261,6 +261,7 @@
         document.getElementById("totype").innerHTML = opts[rand].code;
         opts[rand].complete = "yes";
         options = opts[rand].sugg;
+        autocomplete(document.getElementById("myInput"), options);
       } else {
         nextText();
       }
