@@ -15,9 +15,10 @@
   <h2 id="etf"></h2>
   <p id="totype"></p>
   <p id ="formloc">
-    <form id="formloc2">
-      <textarea id="theform" rows="10" cols= "150" name="insert"></textarea>
-      <br>
+    <form id="formloc2" autocomplete="off">
+      <div class="autocomplete" style="width:300px;">
+         <input id="myInput" type="text" name="input" placeholder="Code here!">
+      </div>
       <button type="button" value="Submit" onclick="nextTest()">SUBMIT</button>
     </form>
   </p>
@@ -36,6 +37,22 @@
   <p>Take last (unless taken, then you are done!)</p>
   <p id = "last"></p>
   <script>
+    /* Timer template */
+    var startTime;
+    function startButton() {
+      startTime = Date.now();
+    }
+    function stopButton() {
+      if (startTime) {
+        var endTime = Date.now();
+        var difference = endTime - startTime;
+        startTime = null;
+        return difference;
+      } else {
+          alert('Start button not yet started');
+      }
+    }
+    
     var opts =
         [{code: "<span style='color:gray'>elif l1.val< l2.val:</span><br><span style='color:black'><b>l1.next = self.mergeTwoLists(l1.next, 12)</b></span><br><span style='color:gray'>return l1<br>else:<br>l2.next = self.mergeTwoLists(l1, l2.next)</span>",
           typed: "l1.next = self.mergeTwoLists(l1.next, 12)",
