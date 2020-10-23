@@ -122,7 +122,7 @@
     var rand;
     
     function initTest() {
-      document.getElementById("etf").innerHTML = "Please type the highlighted statement below:";
+      document.getElementById("etf").innerHTML = "HI.Please type the highlighted statement below:";
       document.getElementById("buttoncont").innerHTML = " ";
       //startButton();
       nextText();
@@ -152,12 +152,12 @@
             
     function nextTest() {
       
-      opts[rand].result = document.getElementById("theform").value;
+      opts[rand].result = document.getElementById("myInput").value;
       
       opts[rand].diff = measureDifference();
       //opts[rand].time = stopButton();
       
-      document.getElementById("theform").value = "";
+      document.getElementById("myInput").value = "";
       
       if (checkOpts() == 1) {
         nextText();
