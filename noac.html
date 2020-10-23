@@ -124,7 +124,7 @@
     function initTest() {
       document.getElementById("etf").innerHTML = "HI.Please type the highlighted statement below:";
       document.getElementById("buttoncont").innerHTML = " ";
-      //startButton();
+      startButton();
       nextText();
       
     }
@@ -155,7 +155,7 @@
       opts[rand].result = document.getElementById("myInput").value;
       
       opts[rand].diff = measureDifference();
-      //opts[rand].time = stopButton();
+      opts[rand].time = stopButton();
       
       document.getElementById("myInput").value = "";
       
