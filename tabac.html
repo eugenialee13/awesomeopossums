@@ -148,7 +148,7 @@
     /*An array containing all the country names in the world:*/
     // TODO: REPLACE ONCE CODE MERGED
     //var options = opts[rand].suggest;
-    var options = ['breakfast', 'second breakfast', 'elevensies', 'teatime', "they're taking the hobbits to isengaurd"];
+    var options = opts[rand].sugg;
     /*initiate the autocomplete function on the "myInput" element, and pass along the options array as possible autocomplete values:*/
     autocomplete(document.getElementById("myInput"), options);
   
@@ -159,7 +159,8 @@
           time: 0,
           diff: 0,
           complete: "no",
-          id: "1"
+          id: "1",
+          sugg: ["L1.next", "L1.val", "self.mergeTwoLists("]
           },
          {code: "<span style='color:gray'>for char in s:<br>if char!= ']': stack.append(char)<br>else:<br>while no stack[-1].isdigit(): e_str = stack.pop() + e_str<br></span><span style='color:black'><b>while stack and stack[-1].isdigit(): k = stack.pop() + k</b></span><br><span style='color:gray'>e_str, k = e_str.strip('['), int(k)<br>stack.append(k.e_str)</span>",
           typed: "while stack and stack[-1].isdigit(): k = stack.pop() + k",
@@ -167,7 +168,8 @@
           time: 0,
           diff: 0,
           complete: "no",
-          id: "2"
+          id: "2",
+          sugg: ["while", "stack.append", "stack.clear", "stack.copy", "stack.count", "stack.extend", "stack.index", "stack.insert", "stack.pop()", "stack.remove", "stack.reverse"]
          },
          {code: "<span style='color:gray'>pre, numStrs, shortest = str(), len(strs), len(min(strs, key=len))<br></span><span style='color:black'><b>for i in range(shortest):</b><br></span><span style='color:gray'>s = strs[0][i]<br>for j in range(1, numStrs):<br>if ord(strs[j][i]) ^ ord(s): return pre<br>pre +=s</span>",
           typed: "for i in range(shortest):",
@@ -175,7 +177,8 @@
           time: 0,
           diff: 0,
           complete: "no",
-          id: "3"
+          id: "3",
+          sugg: ["for i in", "range(shortest)", "range(numStrs)"]
          },
          {code: "<span style='color:gray'>from math import factorial<br>class Solution:<br>def uniquePaths(self, m: int, n: int) -> int:<br>m, n = m - 1, n - 1<br></span><span style='color:black'><b>return math.factorial(n + m) // (math.factorial(n) * math.factorial(m))</b></span>",
           typed: "return math.factorial(n + m) // (math.factorial(n) * math.factorial(m))",
@@ -183,7 +186,8 @@
           time: 0,
           diff: 0,
           complete: "no",
-          id: "4"
+          id: "4",
+          sugg: ["math.ceil", "math.cos", "math.degrees", "math.factorial", "math.floor", "math.log", "math.pow", "math.sin", "math.tan"]
          },
          {code: "<span style='color:gray'>class Solution:<br>def isPalindrome(self, s: str) -> bool:<br></span><span style='color:black'><b>s = ''.join([c for c in s if c.isalnum()]).lower()</b></span><br><span style='color:gray'>return all ([s[i] == s[~i] for i in range(len(s) // 2)])</span>",
           typed: "s = ''.join([c for c in s if c.isalnum()]).lower()",
@@ -191,7 +195,8 @@
           time: 0,
           diff: 0,
           complete: "no",
-          id: "5"
+          id: "5",
+          sugg: ["''.join", "''.merge", "''.pop", "c.isalnum()]).capitalize", "c.isalnum()]).count", "c.isalnum()]).endswith", "c.isalnum()]).find", "c.isalnum()]).format", "c.isalnum()]).isalpha", "c.isalnum()]).index", "c.isalnum()]).join", "c.isalnum()]).lower", "c.isalnum()]).replace"]
          },         
          {code: "<span style='color:gray'>s = set()<br>for n in nums:<br></span><span style='color:black'><b>if n in s: s.remove(n)</b></span><br><span style='color:gray'>else: s.add(n)<br><return s.pop()</span>",
           typed: "if n in s: s.remove(n)",
@@ -199,7 +204,8 @@
           time: 0,
           diff: 0,
           complete: "no",
-          id: "6"
+          id: "6",
+          sugg: ["s.add", "s.clear", "s.copy", "s.difference", "s.discard", "s.intersection", "s.pop", "s.remove", "s.update"]
          },        
          {code: "<span style='color:gray'>import heapq<br>freq, heap = collections.defaultdict(int), []<br>for n in nums: freq[n] += 1<br></span><span style='color:black'><b>for key, val in freq.items():</b></span><br><span style='color:gray'>if len(heap) < k: heapq.heappush(heap, (val,key))<br>else: heapq.heappushpop(heap, (val, key))<br>return [x[1] for x in heap]</span>",
           typed: "for key, val in freq.items():",
@@ -207,7 +213,8 @@
           time: 0,
           diff: 0,
           complete: "no",
-          id: "7"
+          id: "7",
+          sugg: ["for n in", "for key, val in", "for key in", "freq.clear", "freq.copy", "freq.get", "freq.items", "freq.keys", "freq.pop", "freq.values"]
          },         
          {code: "<span style='color:gray'>r = list()<br>for n in range(1, n+1):<br>if n % 15 == 0: r.append('FizzBuzz')<br></span><span style='color:black'><b>elif n % 5 == 0: r.append('Buzz')</b></span><br><span style='color:gray'>elif n % 3 == 0: r.append('Fizz')<br>else: r.append(str(n))</span>",
           typed: "elif n % 5 == 0: r.append('Buzz')",
@@ -215,7 +222,8 @@
           time: 0,
           diff: 0,
           complete: "no",
-          id: "8"
+          id: "8",
+          sugg: ["elif", "r.append", "r.clear", "r.copy", "r.count", "r.extend", "r.index", "r.insert", "r.pop", "r.remove", "r.reverse"]
          },         
          {code: "<span style='color:gray'>index = key % self.size</span><br><span style='color:black'><b>if not self.map[index]: self.map[index] = list()</b><br></span><span style='color:gray'>val = self.get(key)<br>if val != -1: self.remove(key)<br>self.map[index].append((key, value))</span>",
           typed: "if not self.map[index]: self.map[index] = list()",
@@ -223,7 +231,8 @@
           time: 0,
           diff: 0,
           complete: "no",
-          id: "9"
+          id: "9",
+          sugg: ["self.get", "self.map" "self.put", "self.remove", "self.size", "index"]
          },
          {code: "<span style='color:gray'>happy_set = set()<br></span><span style='color:black'><b>while n > 1 and n not in happy_set:</b></span><br><span style='color:gray'>happy_set.add(n)<br>n = sum([int(x) ** 2 for x in list(str(n))])<br>return n == 1</span>",
           typed: "while n > 1 and n not in happy_set:",
@@ -231,7 +240,8 @@
           time: 0,
           diff: 0,
           complete: "no",
-          id: "10"
+          id: "10",
+          sugg: ["while", "happy_set"]
          }];
   
     var rand;
