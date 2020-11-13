@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="ac.css">
+  <meta charset="utf-8">
+  <title>Tab Autocomplete</title>
+</head>   
+<body>
+    <h1>
+        Tab Autocomplete
+    </h1>
+    <p id="buttoncont">
+      <button id="startbutton" type="button" onclick="initTest()">CLICK TO INITIALIZE</button>
+    </p>
+    <h2 id="etf"></h2>
+    <p id="totype"></p>
+    <!--Make sure the form has the autocomplete function switched off:-->
+    <p id="formloc"></p>
+      <form id="formloc2" autocomplete="off">
+         <div class="autocomplete" style="width:300px;">
+            <input id="myInput" type="text" name="myCountry" placeholder="Country">
+         </div>
+       <button type="button" value="Submit" onclick="nextTest()">SUBMIT</button>
+    </form>
+    <script>
+    function autocomplete(inp, arr) {
+        console.log('inside tab autocomplete function');
+        /*the autocomplete function takes two arguments,
+        the text field element and an array of possible autocompleted values:*/
+        var currentFocus;
+        /*execute a function when someone writes in the text field:*/
+        inp.addEventListener("input", function(e) {
+            var a, b, i, val = this.value;
+            /*close any already open lists of autocompleted values*/
+            closeAllLists();
+            if (!val) { return false;}
+            currentFocus = -1;
+            /*create a DIV element that will contain the items (values):*/
+            a = document.createElement("DIV");
+            a.setAttribute("id", this.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+            /*append the DIV element as a child of the autocomplete container:*/
+            this.parentNode.appendChild(a);
+            /*for each item in the array...*/
+            for (i = 0; i < arr.length; i++) {
+            /*check if the item starts with the same letters as the text field value:*/
+            console.log(arr[i].substr(0, val.length).toUpperCase());
+            console.log(val.toUpperCase());
+            if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                /*create a DIV element for each matching element:*/
+                b = document.createElement("DIV");
+                /*make the matching letters bold:*/
+                b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                b.innerHTML += arr[i].substr(val.length);
+                /*insert a input field that will hold the current array item's value:*/
+                b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                /*execute a function when someone clicks on the item value (DIV element):*/
+                // Listen for the event.
+                b.addEventListener("click", function(e) {
+                    console.log('inside event handler');
+                    /*insert the value for the autocomplete text field:*/
+                    inp.value = this.getElementsByTagName("input")[0].value;
+                    /*close the list of autocompleted values,
+                    (or any other open lists of autocompleted values:*/
+                    closeAllLists();
+                });
+                a.appendChild(b);
+            }
+            }
+        });
+        /*execute a function presses a key on the keyboard:*/
+        inp.addEventListener("keydown", function(e) {
+            var x = document.getElementById(this.id + "autocomplete-list");
+            if (x) x = x.getElementsByTagName("div");
+            if (e.keyCode == 9) {
+                e.preventDefault();
+            /*If the tab key is pressed,
+            increase the currentFocus variable:*/
+            currentFocus++;
+            /*and and make the current item more visible:*/
+            addActive(x);
+            } else if (e.keyCode == 13) {
+            /*If the ENTER key is pressed, prevent the form from being submitted,*/
+            e.preventDefault();
+            if (currentFocus > -1) {
+                console.log('before event dispatch');
+                /*and simulate a click on the "active" item:*/
+                if (x) x[currentFocus].click();
+                console.log('after event dispatch');
+            }
+            }
+        });
+        function addActive(x) {
+        /*a function to classify an item as "active":*/
+        if (!x) return false;
+        /*start by removing the "active" class on all items:*/
+        removeActive(x);
+        if (currentFocus >= x.length) currentFocus = 0;
+        if (currentFocus < 0) currentFocus = (x.length - 1);
+        /*add class "autocomplete-active":*/
+        x[currentFocus].classList.add("autocomplete-active");
+        }
+        function removeActive(x) {
+        /*a function to remove the "active" class from all autocomplete items:*/
+        for (var i = 0; i < x.length; i++) {
+            x[i].classList.remove("autocomplete-active");
+        }
+        }
+        function closeAllLists(elmnt) {
+        /*close all autocomplete lists in the document,
+        except the one passed as an argument:*/
+        var x = document.getElementsByClassName("autocomplete-items");
+        for (var i = 0; i < x.length; i++) {
+            if (elmnt != x[i] && elmnt != inp) {
+            x[i].parentNode.removeChild(x[i]);
+            }
+        }
+        }
+        /*execute a function when someone clicks in the document:*/
+        document.addEventListener("click", function (e) {
+            closeAllLists(e.target);
+        });
+    }
+    /*An array containing all the country names in the world:*/
+    var options = [
+        "var",
+        "var b = 20;",
+        "var c = 30;",
+        "var d = 40;"
+    ];
+    /*initiate the autocomplete function on the "myInput" element, and pass along the options array as possible autocomplete values:*/
+    autocomplete(document.getElementById("myInput"), options);
+    
+          var opts =
+        [{code: "<span style='color:gray'>elif L1.val< l2.val:</span><br><span style='color:black'><b>L1.next = self.mergeTwoLists(L1.next, 12)</b></span><br><span style='color:gray'>return L1<br>else:<br>l2.next = self.mergeTwoLists(L1, l2.next)</span>",
+          typed: "L1.next = self.mergeTwoLists(L1.next, 12)",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "1"
+          },
+         {code: "<span style='color:gray'>for char in s:<br>if char!= ']': stack.append(char)<br>else:<br>while no stack[-1].isdigit(): e_str = stack.pop() + e_str<br></span><span style='color:black'><b>while stack and stack[-1].isdigit(): k = stack.pop() + k</b></span><br><span style='color:gray'>e_str, k = e_str.strip('['), int(k)<br>stack.append(k.e_str)</span>",
+          typed: "while stack and stack[-1].isdigit(): k = stack.pop() + k",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "2"
+         },
+         {code: "<span style='color:gray'>pre, numStrs, shortest = str(), len(strs), len(min(strs, key=len))<br></span><span style='color:black'><b>for i in range(shortest):</b><br></span><span style='color:gray'>s = strs[0][i]<br>for j in range(1, numStrs):<br>if ord(strs[j][i]) ^ ord(s): return pre<br>pre +=s</span>",
+          typed: "for i in range(shortest):",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "3"
+         },
+         {code: "<span style='color:gray'>from math import factorial<br>class Solution:<br>def uniquePaths(self, m: int, n: int) -> int:<br>m, n = m - 1, n - 1<br></span><span style='color:black'><b>return math.factorial(n + m) // (math.factorial(n) * math.factorial(m))</b></span>",
+          typed: "return math.factorial(n + m) // (math.factorial(n) * math.factorial(m))",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "4"
+         },
+         {code: "<span style='color:gray'>class Solution:<br>def isPalindrome(self, s: str) -> bool:<br></span><span style='color:black'><b>s = ''.join([c for c in s if c.isalnum()]).lower()</b></span><br><span style='color:gray'>return all ([s[i] == s[~i] for i in range(len(s) // 2)])</span>",
+          typed: "s = ''.join([c for c in s if c.isalnum()]).lower()",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "5"
+         },         
+         {code: "<span style='color:gray'>s = set()<br>for n in nums:<br></span><span style='color:black'><b>if n in s: s.remove(n)</b></span><br><span style='color:gray'>else: s.add(n)<br><return s.pop()</span>",
+          typed: "if n in s: s.remove(n)",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "6"
+         },        
+         {code: "<span style='color:gray'>import heapq<br>freq, heap = collections.defaultdict(int), []<br>for n in nums: freq[n] += 1<br></span><span style='color:black'><b>for key, val in freq.items():</b></span><br><span style='color:gray'>if len(heap) < k: heapq.heappush(heap, (val,key))<br>else: heapq.heappushpop(heap, (val, key))<br>return [x[1] for x in heap]</span>",
+          typed: "for key, val in freq.items():",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "7"
+         },         
+         {code: "<span style='color:gray'>r = list()<br>for n in range(1, n+1):<br>if n % 15 == 0: r.append('FizzBuzz')<br></span><span style='color:black'><b>elif n % 5 == 0: r.append('Buzz')</b></span><br><span style='color:gray'>elif n % 3 == 0: r.append('Fizz')<br>else: r.append(str(n))</span>",
+          typed: "elif n % 5 == 0: r.append('Buzz')",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "8"
+         },         
+         {code: "<span style='color:gray'>index = key % self.size</span><br><span style='color:black'><b>if not self.map[index]: self.map[index] = list()</b><br></span><span style='color:gray'>val = self.get(key)<br>if val != -1: self.remove(key)<br>self.map[index].append((key, value))</span>",
+          typed: "if not self.map[index]: self.map[index] = list()",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "9"
+         },
+         {code: "<span style='color:gray'>happy_set = set()<br></span><span style='color:black'><b>while n > 1 and n not in happy_set:</b></span><br><span style='color:gray'>happy_set.add(n)<br>n = sum([int(x) ** 2 for x in list(str(n))])<br>return n == 1</span>",
+          typed: "while n > 1 and n not in happy_set:",
+          result: " ",
+          time: 0,
+          diff: 0,
+          complete: "no",
+          id: "10"
+         }];
+  
+    var rand;
+    
+    function initTest() {
+      document.getElementById("etf").innerHTML = "Please type the highlighted statement below and then click submit:";
+      document.getElementById("buttoncont").innerHTML = " ";
+      nextText();
+      
+    }
+    
+    function nextText() {
+      rand = Math.floor(Math.random()*opts.length);
+      
+      if (opts[rand].complete == "no") {
+        startTimer();
+        document.getElementById("totype").innerHTML = opts[rand].code;
+        opts[rand].complete = "yes";
+      } else {
+        nextText();
+      }
+    }
+    
+    function checkOpts() {
+      var i;
+      for(i = 0; i < opts.length; i++) {
+        if (opts[i].complete == "no") {
+            return 1;
+        }
+      }
+        return 0;
+    }
+            
+    function nextTest() {
+      
+      opts[rand].result = document.getElementById("myInput").value;
+      
+      opts[rand].diff = measureDifference();
+      opts[rand].time = stopTimer();
+      
+      document.getElementById("myInput").value = "";
+      
+      if (checkOpts() == 1) {
+        nextText();
+      } else {
+        finishTest();
+      }
+    }
+    
+    function measureDifference() {
+      var str1 = (opts[rand].typed).split(/ |/);
+      var str2 = (opts[rand].result).split(/ |/);
+      var counter = 0;
+      var i;
+      var max;
+      
+      if (str1.length > str2.length) {
+        max = str1.length;
+      } else {
+        max = str2.length;
+      }
+      
+      for(i = 0; i < max; i++) {
+        if (str1[i] != str2[i]) {
+          counter++;
+        } else {
+        }
+      }
+      return counter;
+    }
+
+    /* Timer template */
+    var startTime;
+    function startTimer() {
+      startTime = Date.now();
+    }
+    function stopTimer() {
+      if (startTime) {
+        var endTime = Date.now();
+        var difference = (endTime - startTime)/1000;
+        startTime = null;
+        return difference;
+      } else {
+          alert('Timer not yet started');
+      }
+    }
+    
+    function finishTest() {
+      var i;
+      var idstr = "ID: ";
+      var timestr = ", TIME: ";
+      var diffstr = ", DIFFERENCES: ";
+      
+      document.getElementById("etf").innerHTML = "Test Complete! Data below:";
+      document.getElementById("formloc").innerHTML = "";
+      document.getElementById("totype").innerHTML = "";
+      document.getElementById("formloc2").innerHTML = "";
+      document.getElementById("nexttext").innerHTML = "Take Next (unless taken, then move to last)";
+      document.getElementById("lasttext").innerHTML = "Take Last (unless taken, then take form)";
+      document.getElementById("formtext").innerHTML = "Closing Form:";
+      document.getElementById("finalform").innerHTML = '<a href="https://forms.gle/vTJvhg35c8DYeQP1A">Google Form!</a>';
+      
+      for(i = 0; i < opts.length; i++) {
+        document.getElementById(opts[i].id).innerHTML = idstr.concat(opts[i].id, timestr, (opts[i].time).toString(), " sec", diffstr, (opts[i].diff).toString());
+      }
+      
+      var ids = ["next", "last"];
+      var links =
+          ['<a href="ac1.html"> Mouse Autocomplete Test </a>',
+           '<a href="ac2.html"> Keyboard Autocomplete Test </a>'
+           ];
+      i = 0;
+      while (i < ids.length) {
+        rand = Math.floor(Math.random()*ids.length);
+        
+        if (links[rand] != "chosen") {
+          document.getElementById(ids[i]).innerHTML = links[rand];
+          links[rand] = "chosen";
+          i++
+        }
+      }
+    }
+  </script>
+</body>
+</html>
