@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+.rectangle {
+  margin: 100px;
+  height: 200px;
+  width: 500px;
+  background-color: #d5f4e6;
+}
+
+html, body {
+  height: 100%
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: black;
+  text-align: center;
+}
+h2 {
+  color: maroon;
+  text-align: center;}
+p {color: gray;}
+
+div {
+  background-color: #d5f4e6;
+}
