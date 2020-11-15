@@ -1,11 +1,8 @@
-* {
-  background-color: whitesmoke;
-}
-
 .screen {
   height: 600px;
   width: 900px;
-  background-color: whitesmoke;
+  border-style: solid;
+  background-color: #f1f3f8;
 }
 
 .preview {
