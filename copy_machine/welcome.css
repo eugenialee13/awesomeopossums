@@ -6,30 +6,90 @@
   height: 559px;
   width: 794px;
   border-style: solid;
-  background-color: rgb(218, 236, 236);
   display: inline-flex;
 }
 
-.rect_half {
+.rect_left {
   width: 50%;
-  background-color: rgb(218, 236, 236);
   float: left;
 }
 
+.rect_right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .rect_leftthird {
-  height: 25%;
-  background-color: rgb(218, 236, 236);
+  height: 22%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
 
-.num_input {
-  width: 25%;
-  display: table-cell;
-  background: black;
-  outline: 3px solid white;
+.next {
+  background-color:  #fcfdff;
+  border: solid #8d93ab;
+  color: #393b44;
+  height: 100px;
+  width: 200px;
+  margin-left: 3px;
+  margin-right: 2px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 35px;
 }
+
+/* Formatting the keypad */
+.table_row {
+  background-color: #d6e0f0;
+  height: 50px;
+  margin: 3px;
+  display: table;
+  justify-content: center;
+}
+
+.pad {
+  width: 71%;
+  background-color: #d6e0f0;
+  display: table;
+}
+
+.keypadbtn {
+  background-color:  #fcfdff;
+  border: solid #8d93ab;
+  color: #393b44;
+  height: 100px;
+  width: 85px;
+  margin-left: 3px;
+  margin-right: 2px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 35px;
+}
+/* End formatting keypad */
+
+/* Formatting the display of numbers on the left when you click on the keypad*/
+.num_input {
+  width: 50px;
+  height: 70px;
+  display: table-cell;
+  padding: 12px;
+  text-align: center;
+  background: #fcfdff;
+  border-bottom: 3px solid #393b44;
+}
+
+.pin_text {
+  width: 90%;
+  display: table;
+  color: #393b44;
+  font-size: 35px;
+}
+/* End formatting PIN display */
 
 html, body {
   height: 100%
@@ -45,7 +105,7 @@ body {
 }
 
 h1 {
-  color: black;
+  color:#393b44;
   font-size: 50px;
   text-align: center;
   display: flex;
@@ -54,14 +114,11 @@ h1 {
 }
 
 h2 {
-  color: maroon;
+  color: #5c5f6e;
   text-align: center;
 }
 
-p {
-  color: gray;
-}
 
 div {
-  background-color: blue;
+  background-color: #f1f3f8;
 }

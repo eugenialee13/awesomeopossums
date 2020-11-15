@@ -10,59 +10,61 @@
 <body>
     <main>
       <div class="rectangle">
-        <div class="rect_half">
+        <div class="rect_left">
           <div class="rect_leftthird">
             <h1>WELCOME</h1>
           </div>
           <div class="rect_leftthird">
             <h2>Please enter your account code</h2>
           </div>
-          <div style="width: 100%; display: table; color: white;">
-            <div style="display: table-row; height: 100%;">
-              <div id="1" class="num_input">
-                *
-              </div>
-              <div id="2" class= "num_input">
-                *
-              </div>
-              <div id="3" class= "num_input">
-                *
-              </div>
-              <div id="4" class= "num_input">
-                *
+          <div class="rect_leftthird">
+            <div class="pin_text">
+              <div style="display: table-row; height: 100%; justify-content: center;">
+                <div id="1" class="num_input">
+                  *
+                </div>
+                <div id="2" class= "num_input">
+                  *
+                </div>
+                <div id="3" class= "num_input">
+                  *
+                </div>
+                <div id="4" class= "num_input">
+                  *
+                </div>
               </div>
             </div>
           </div>
+          <div class="rect_leftthird">
+            <a href="options.html"><button type="nextpage" class="next">Next</button></a>
+          </div>
         </div>
-        <span> HI WHERE IS THIS </span>
-      </div>
-      <a href="options.html">Next</a> 
-        <div class="rect_half">
-          <h2>Insert keypad here</h2>
-          <div style="width: 100%; display: table;">
-            <div style="display: table-row; height: 50px;">
-              <button type="button" onclick=buttonPress(1)>1</button>
-              <button type="button" onclick=buttonPress(2)>2</button>
-              <button type="button" onclick=buttonPress(3)>3</button>
+        <div class="rect_right">
+          <div class="pad">
+            <div class="table_row">
+              <button type="button" class="keypadbtn" onclick=buttonPress(1)>1</button>
+              <button type="button" class="keypadbtn" onclick=buttonPress(2)>2</button>
+              <button type="button" class="keypadbtn" onclick=buttonPress(3)>3</button>
             </div>
-            <div style="display: table-row; height: 50px;">
-              <button type="button" onclick=buttonPress(4)>4</button>
-              <button type="button" onclick=buttonPress(5)>5</button>
-              <button type="button" onclick=buttonPress(6)>6</button>
+            <div class="table_row">
+              <button type="button" class="keypadbtn" onclick=buttonPress(4)>4</button>
+              <button type="button" class="keypadbtn" onclick=buttonPress(5)>5</button>
+              <button type="button" class="keypadbtn" onclick=buttonPress(6)>6</button>
             </div>
-            <div style="display: table-row; height: 50px;">
-              <button type="button" onclick=buttonPress(7)>7</button>
-              <button type="button" onclick=buttonPress(8)>8</button>
-              <button type="button" onclick=buttonPress(9)>9</button>
+            <div class="table_row">
+              <button type="button" class="keypadbtn" onclick=buttonPress(7)>7</button>
+              <button type="button" class="keypadbtn" onclick=buttonPress(8)>8</button>
+              <button type="button" class="keypadbtn" onclick=buttonPress(9)>9</button>
             </div>
-            <div style="display: table-row; height: 50px;">
-              <button type="button" onclick=buttonPress(0)>0</button>
-              <button type="button" onclick=buttonPress(-1)><-</button>
-              <button type="button" onclick=buttonPress(-2)>C</button>
+            <div class="table_row">
+              <button type="button" class="keypadbtn" onclick=buttonPress(0)>0</button>
+              <button type="button" class="keypadbtn" onclick=buttonPress(-1)>&larr;</button>
+              <button type="button" class="keypadbtn" onclick=buttonPress(-2)>C</button>
             </div>
           </div>
         </div>
-      <a href="confirmationpage.html">Next</a> 
+      </div>  
+      <a href="confirmationpage.html">Confirmation</a>
     </main>
   <script>
     var numids = ["1", "2", "3", "4"];
