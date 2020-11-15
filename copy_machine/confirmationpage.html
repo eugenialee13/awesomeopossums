@@ -2,24 +2,35 @@
 <html>
 <head>
     <script type="text/javascript" src="brightnessSlider.js"></script>
+    <link rel="stylesheet" href="style2.css">
     <title>Copy Machine Interface</title>
 </head>
 
 <body>
-    <main>
-        <p>v. Four</p>
-        <img id="image" src="exampleImage.jpg">
-        <input
-            type="range"
-            min="1"
-            max="100"
-            value="50"
-            class="slider"
-            id="brightnessSlider"
-            oninput="changeBrightness(this.value)"
-            onchange="changeBrightness(this.value)"
-        >
+    <div class="screen">
+        <div class="detailReview">
+            <p>
+                v. 2
+            </p>
         </div>
-    </main>
+        <div class="preview">
+            <img id="image" src="exampleImage.jpg">
+            <input
+                type="range"
+                min="1"
+                max="100"
+                value="50"
+                class="slider"
+                id="brightnessSlider"
+                oninput="changeBrightness(this.value)"
+                onchange="changeBrightness(this.value)"
+            >
+        </div>
+        <div class="submit">
+            <p>
+                Confirm & Print
+            </p>
+        </div>
+    </div>
 </body>
 </html>

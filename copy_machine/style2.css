@@ -1,0 +1,36 @@
+* {
+  background-color: whitesmoke;
+}
+
+.screen {
+  height: 600px;
+  width: 900px;
+  background-color: whitesmoke;
+}
+
+.preview {
+  position: relative;
+  top: 50px;
+  left: 450px;
+  height: 300px;
+  width: 450px;
+  border: 2px double black;
+  background-color: white;
+}
+
+#image {
+  position: relative;
+  top: 10px;
+  margin: 10px;
+  height: 150px;
+}
+
+.submit {
+  position: relative;
+  top: 50px;
+  left: 450px;
+  height: 300px;
+  width: 450px;
+  border: 2px double black;
+  background-color: white;
+}
