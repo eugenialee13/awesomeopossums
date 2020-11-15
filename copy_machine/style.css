@@ -2,11 +2,22 @@
   box-sizing: border-box;
 }
 
+.container {
+  min-height: 10em;
+  /* display: table-cell; */
+  vertical-align: middle;
+}
+
 .rectangle {
-  margin: 100px;
-  height: 200px;
-  width: 500px;
+  height: 420px;
+  width: 596px;
   background-color: #d5f4e6;
+}
+
+.rect_half {
+  height: 420px;
+  width: 298px;
+  background-color: red;
 }
 
 html, body {
@@ -21,14 +32,23 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 h1 {
   color: black;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 h2 {
   color: maroon;
-  text-align: center;}
-p {color: gray;}
+  text-align: center;
+}
+
+p {
+  color: gray;
+}
 
 div {
   background-color: #d5f4e6;
