@@ -17,4 +17,33 @@
       </div>
       <a href="confirmationpage.html">Next</a> 
     </main>
+  <script>
+    var numids = ["1", "2", "3", "4"];
+    var nums = [-1, -1, -1, -1];
+    var id = 0;
+    
+    function buttonPress(pressed) {
+      
+      if (pressed === -2) {
+        nums = [-1, -1, -1, -1];
+        id = 0;
+        // add the stuff about changing element value later
+      } else if (pressed === -1) {
+        if (id === 0) {
+          // blank line
+        } else {
+          id = id - 1;
+          nums[id] = -1;
+          // getting rid of the display
+        }
+      } else if (id > 4) {
+        // blank
+      } else {
+        nums[id] = pressed;
+        // change the display
+        id = id + 1;
+      }
+    }
+          
+  </script>
 </body>
