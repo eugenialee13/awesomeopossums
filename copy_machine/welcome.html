@@ -2,37 +2,70 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="welcome.css">
   <title>Copy Machine Interface</title>
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
 </head>
 
 <body>
     <main>
       <div class="rectangle">
         <div class="rect_half">
-          <h1>WELCOME</h1>
-          <h2>Please enter your account code</h2>
+          <div class="rect_leftthird">
+            <h1>WELCOME</h1>
+          </div>
+          <div class="rect_leftthird">
+            <h2>Please enter your account code</h2>
+          </div>
           <div style="width: 100%; display: table; color: white;">
-            <div style="display: table-row; height=100%;">
-              <div id="1" style="width: 25%; display: table-cell; background: black; outline: 3px solid white;">
+            <div style="display: table-row; height: 100%;">
+              <div id="1" class="num_input">
                 *
               </div>
-              <div id="2" style="width: 25%; display: table-cell; background: black; outline: 3px solid white;">
+              <div id="2" class= "num_input">
                 *
               </div>
-              <div id="3" style="width: 25%; display: table-cell; background: black; outline: 3px solid white;">
+              <div id="3" class= "num_input">
                 *
               </div>
-              <div id="4" style="width: 25%; display: table-cell; background: black; outline: 3px solid white;">
+              <div id="4" class= "num_input">
                 *
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <span> HI WHERE IS THIS </span>
       </div>
       <a href="options.html">Next</a> 
+=======
+        <div class="rect_half">
+          <h2>Insert keypad here</h2>
+          <div style="width: 100%; display: table;">
+            <div style="display: table-row; height: 50px;">
+              <button type="button" onclick=buttonPress(1)>1</button>
+              <button type="button" onclick=buttonPress(2)>2</button>
+              <button type="button" onclick=buttonPress(3)>3</button>
+            </div>
+            <div style="display: table-row; height: 50px;">
+              <button type="button" onclick=buttonPress(4)>4</button>
+              <button type="button" onclick=buttonPress(5)>5</button>
+              <button type="button" onclick=buttonPress(6)>6</button>
+            </div>
+            <div style="display: table-row; height: 50px;">
+              <button type="button" onclick=buttonPress(7)>7</button>
+              <button type="button" onclick=buttonPress(8)>8</button>
+              <button type="button" onclick=buttonPress(9)>9</button>
+            </div>
+            <div style="display: table-row; height: 50px;">
+              <button type="button" onclick=buttonPress(0)>0</button>
+              <button type="button" onclick=buttonPress(-1)><-</button>
+              <button type="button" onclick=buttonPress(-2)>C</button>
+            </div>
+          </div>
+        </div>
+      <a href="confirmationpage.html">Next</a> 
+>>>>>>> 87b4ea9329eeaab0cf1367e12b31de07da0031d4
     </main>
   <script>
     var numids = ["1", "2", "3", "4"];
