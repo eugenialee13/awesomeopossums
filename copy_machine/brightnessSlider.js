@@ -1,4 +1,5 @@
-export function changeBrightness() {
-    console.log("inside the changeBrightness function");
+function changeBrightness(percent) {
+    console.log(percent);
+    document.getElementById("image").style.filter = "brightness(" + percent + "%)";
     return
 }

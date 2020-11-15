@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Copy Machine Interface</title>
+    <script type="text/javascript" src="brightnessSlider.js"></script>
+    <title>Copy Machine Interface</title>
 </head>
 
 <body>
     <main>
-        <img id="image" src="./exampleImage.jpg">
+        <p>v. Four</p>
+        <img id="image" src="exampleImage.jpg">
         <input
             type="range"
             min="1"
@@ -14,6 +16,8 @@
             value="50"
             class="slider"
             id="brightnessSlider"
+            oninput="changeBrightness(this.value)"
+            onchange="changeBrightness(this.value)"
         >
         </div>
     </main>
