@@ -8,25 +8,59 @@
 </head>
 
 <body>
-  <div class="rectangle">
+  <form action="confirmationpage.html" method="get" class="rectangle">
   	<div class="options-row">
-  		<div class="options-box">Number of Copies</div>
+  		<div class="options-box">
+  			Number of Copies
+  			<input type="number" id="num-copies" name="num-copies" min="1" value="1">
+  		</div>
   		<div class="options-box">
   			Separator Page
-  			<div class="options-button">Yes</div>
-  			<div class="options-button">No</div>
+  			<input type="radio" id="yes" name="separator-page" value="yes">
+  			<label for="yes">Yes</label><br>
+  			<input type="radio" id="no" name="separator-page" value="no" checked>
+  			<label for="no">No</label><br>	
   		</div>
-  		<div class="options-box">From Bin</div>
+  		<div class="options-box">
+  			From Bin
+  			<input type="radio" id="bin-a" name="from-bin" value="bin-a" disabled>
+  			<label for="bin-a">Bin A</label><br>
+  			<input type="radio" id="bin-b" name="from-bin" value="bin-b" disabled>
+  			<label for="bin-b">Bin B</label><br>
+  			<input type="radio" id="bin-c" name="from-bin" value="bin-c" disabled>
+  			<label for="bin-c">Bin C</label><br>
+  		</div>
   	</div>
   	<div class="options-row">
   		<div class="options-box">
   			Paper Source
-  		  <div class="options-button">Bin A</div>
-  			<div class="options-button">Bin B</div>
-  			<div class="options-button">Bin C</div>
+  			<input type="radio" id="bin-a" name="paper-source" value="bin-a" checked>
+  			<label for="bin-a">Bin A</label><br>
+  			<input type="radio" id="bin-b" name="paper-source" value="bin-b">
+  			<label for="bin-b">Bin B</label><br>
+  			<input type="radio" id="bin-c" name="paper-source" value="bin-c">
+  			<label for="bin-c">Bin C</label><br>
   		</div>
-  		<div class="options-box">Sides</div>
-	  	<div class="options-box">Next</div>
+  		<div class="options-box">
+  			Sides
+  			<div class="side-box">
+  				Original
+  				<input type="radio" id="orig-1" name="side-orig" value="1">
+  				<label for="orig-1">1</label>
+  				<input type="radio" id="orig-2" name="side-orig" value="2">
+  				<label for="orig-2">2</label>		
+  			</div>
+  			<div class="side-box">
+  				Final
+  				<input type="radio" id="final-1" name="side-final" value="1">
+  				<label for="orig-1">1</label>
+  				<input type="radio" id="final-2" name="side-final" value="2">
+  				<label for="final-2">2</label>		
+  			</div>
+  		</div>
+	  	<div class="options-box">
+	  		<button>Next</button>
+	  	</div>
 	  </div>
-  </div>
+  </form>
 </body>
