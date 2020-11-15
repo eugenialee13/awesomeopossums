@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript" src="brightnessSlider.js"></script>
+    <script type="text/javascript" src="confirmationBackend.js"></script>
     <link rel="stylesheet" href="style2.css">
     <title>Copy Machine Interface</title>
 </head>
@@ -9,12 +9,23 @@
 <body>
     <div class="screen">
         <div class="detailReview">
-            <p>
-                v. 2
-            </p>
+            <div id="numCopies">
+            </div>
+            <div id="paperSource">
+            </div>
+            <div id="sides">
+            </div>
+            <div id="separator">
+            </div>
         </div>
+        <script>
+            reviewBox()
+        </script>
         <div class="preview">
-            <img id="image" src="exampleImage.jpg" style="filter:brightness(50%)">
+            <img
+                id="image"
+                src="exampleImage.jpg"
+                style="filter:brightness(50%)">
             <input
                 type="range"
                 min="1"
