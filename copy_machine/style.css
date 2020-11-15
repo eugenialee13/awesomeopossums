@@ -20,6 +20,36 @@
   background-color: red;
 }
 
+.options-row {
+	height: 50%;
+	width: 100%;
+	display: flex;
+	box-sizing: border-box;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.options-box {
+	height: 80%;
+	width: 28%;
+	background-color: white;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+.options-button {
+	color: #fff;
+	background-color: #5995DA;
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+	border: 2px solid #5D6063;
+	border-radius: 5px;
+	width: 35%;
+}
+
 html, body {
   height: 100%
 }
