@@ -35,12 +35,12 @@ function changeBrightness(percent) {
     return
 }
 
-copies = 1;
-paperSource = "A";
-originalSides = 1;
-printSides = 1;
-separator = false;
-separatorSource = null;
+var copies = 1;
+var paperSource = "A";
+let originalSides = 1;
+let printSides = 1;
+let separator = false;
+let separatorSource = null;
 
 function setValues() {
 	console.log("inside setValues function");
