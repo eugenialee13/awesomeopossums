@@ -77,6 +77,7 @@ input[type='number'] {
 
 .options-box-subA {
   background-color: white;
+  max-height: inherit;
   height: 80%;
   width: 100%;
   display: flex;
@@ -137,13 +138,18 @@ input[type='number'] {
   background-color: #dfd;
 }
 
-/*.radio-toolbar input[type="radio"]:focus + label {
-    border: 2px dashed #444;
-}*/
-
 .radio-toolbar input[type="radio"]:checked + label {
     background-color: #bfb;
     border-color: #4c4;
+}
+
+#no:hover {
+  background-color: #fdd;
+}
+
+#no:checked + label {
+    background-color: #fbb;
+    border-color: #cc4343;
 }
 
 .break {
