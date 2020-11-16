@@ -10,54 +10,61 @@
 <body>
     <main>
         <div class="screen">
-            <div class="rect_left">
-                <div class="confirm">
-                    <div class="confirm-row">
-                        <div id="numCopies">
-                            <h2>Copies</h2>
+            <div class="options-row">
+                <button type="button" class="back-button" onclick="location.href='options.html';">Back</button>
+                <button type="button" class="back-button" onclick="location.href='welcome.html';">Logout</button>
+            </div>
+            <div class="main-row">
+                    <div class="rect_left">
+                    <div class="confirm">
+                        <div class="confirm-row">
+                            <div id="numCopies">
+                                <h2>Copies</h2>
+                            </div>
                         </div>
-                    </div>
-                    <div class="confirm-row">
-                        <div id="paperSource">
-                            <h2>Bin</h2>
+                        <div class="confirm-row">
+                            <div id="paperSource">
+                                <h2>Bin</h2>
+                            </div>
                         </div>
-                    </div>
-                    <div class="confirm-row">
-                        <div id="sides">
-                            <h2>1->2</h2>
+                        <div class="confirm-row">
+                            <div id="sides">
+                                <h2>1->2</h2>
+                            </div>
                         </div>
-                    </div>
-                    <div class="confirm-row">
-                        <div id="separator">
-                            <h2>Separator</h2>
+                        <div class="confirm-row">
+                            <div id="separator">
+                                <h2>Separator</h2>
+                            </div>
                         </div>
+                        <script>
+                            reviewBox()
+                        </script>
                     </div>
-                    <script>
-                        reviewBox()
-                    </script>
+                </div>
+                <div class="rect_right">
+                    <div class="preview">
+                        <img
+                            id="image"
+                            src="exampleImage.jpg"
+                            style="filter:brightness(50%)">
+                        <input
+                            type="range"
+                            min="1"
+                            max="100"
+                            value="50"
+                            class="slider"
+                            id="brightnessSlider"
+                            oninput="changeBrightness(this.value)"
+                            onchange="changeBrightness(this.value)"
+                        >
+                    </div>
+                    <div class="submit">
+                        <a href="progress.html"><button type="nextpage" class="next">Confirm Print</button></a>
+                    </div>
                 </div>
             </div>
-            <div class="rect_right">
-                <div class="preview">
-                    <img
-                        id="image"
-                        src="exampleImage.jpg"
-                        style="filter:brightness(50%)">
-                    <input
-                        type="range"
-                        min="1"
-                        max="100"
-                        value="50"
-                        class="slider"
-                        id="brightnessSlider"
-                        oninput="changeBrightness(this.value)"
-                        onchange="changeBrightness(this.value)"
-                    >
-                </div>
-                <div class="submit">
-                    <a href="progress.html"><button type="nextpage" class="next">Confirm Print</button></a>
-                </div>
-            </div>
+            
         </div>
     </main>
 </body>

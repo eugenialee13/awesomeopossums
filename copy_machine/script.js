@@ -9,20 +9,20 @@ function reviewBox() {
     urlParams = new URLSearchParams(window.location.search);
     console.log(urlParams);
 	var div = document.getElementById("numCopies");
-    if (typeof(sessionStorage.getItem("numCopies")) == "number") {
-        div.innerHTML = sessionStorage.getItem("numCopies") + " Copies";
+    if (sessionStorage.getItem("numCopies") != null) {
+        div.innerHTML = "<h2>" + sessionStorage.getItem("numCopies") + " Copies</h2>";
     } else {
-        div.innerHTML = "1 Copy";
+        div.innerHTML = "<h2>" + "1 Copy</h2>";
     }
     div = document.getElementById("paperSource");
-    div.innerHTML = "Bin " + urlParams.get("paper-source");
+    div.innerHTML = "<h2>Bin " + urlParams.get("paper-source") + "</h2>";
     div = document.getElementById("sides");
-    div.innerHTML = urlParams.get("side-orig") + " Sided &rarr;" + urlParams.get("side-final") + " Sided";
+    div.innerHTML = "<h2>" + urlParams.get("side-orig") + " Sided &rarr;" + urlParams.get("side-final") + " Sided</h2>";
     div = document.getElementById("separator");
     if (urlParams.get("separator-page") == "yes") {
-        div.innerHTML = "Bin " + urlParams.get("from-bin") + " Separator";
+        div.innerHTML = "<h2>Bin " + urlParams.get("from-bin") + " Separator</h2>";
     } else {
-        div.innerHTML = "No Separator";
+        div.innerHTML = "<h2>No Separator</h2>";
     }
 }
 
