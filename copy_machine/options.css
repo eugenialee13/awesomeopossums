@@ -52,14 +52,20 @@ input[type='number'] {
   height: 30%;
 }
 
+label {
+  cursor: pointer;
+}
+
 .rectangle {
   height: 559px;
   width: 794px;
   border-style: solid;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .options-row {
-  height: 50%;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -107,6 +113,19 @@ input[type='number'] {
   text-decoration: none;
   cursor: pointer;
   font-size: 35px;
+}
+
+.back-button {
+  background-color:  #fcfdff;
+  border: solid #8d93ab;
+  color: #393b44;
+  height: 50px;
+  width: 75px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  margin: 0 20px;
 }
 
 .radio-toolbar {
