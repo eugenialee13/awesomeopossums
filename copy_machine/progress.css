@@ -24,6 +24,7 @@
   height: 100px;
   width: 200px;
   float: right;
+  border-radius: 4px;
   text-align: center;
   text-decoration: none;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -37,6 +38,7 @@
   color: #393b44;
   height: 200px;
   width: 300px;
+  border-radius: 4px;
   float: right;
   text-align: center;
   text-decoration: none;
