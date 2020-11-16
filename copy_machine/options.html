@@ -85,6 +85,7 @@
 		var number = 0;
 		function makeKeypad() {
 			document.getElementById("copies").innerHTML = '<p id="numdisplay"></p><div style = "width: 100%; display: table;"><div style="display: table-row; height: 20px;"><button type="button" onclick=buttonPress(1)>1</button><button type="button" onclick=buttonPress(2)>2</button><button type="button" onclick=buttonPress(3)>3</button></div><div style="display: table-row; height: 20px;"><button type="button" onclick=buttonPress(4)>4</button><button type="button" onclick=buttonPress(5)>5</button><button type="button" onclick=buttonPress(6)>6</button></div><div style="display: table-row; height: 20px;"><button type="button" onclick=buttonPress(7)>7</button><button type="button" onclick=buttonPress(8)>8</button><button type="button" onclick=buttonPress(9)>9</button></div><div style="display: table-row; height: 20px;"><button type="button" onclick=buttonPress(0)>0</button><button type="button" onclick=buttonPress(-1)><-</button><button type="button" onclick=buttonPress(-2)>ENTER</button></div>';
+			document.getElementById("numdisplay").innerHTML = number;
 		}
 		function buttonPress(num) {
 			if (num === -2) {
