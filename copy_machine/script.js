@@ -1,70 +1,26 @@
 function changeBrightness(percent) {
+    console.log("inside changeBrightness");
     document.getElementById("image").style.filter = "brightness(" + percent + "%)";
     return
 }
 
-var copies = 1;
-var paperSource = "A";
-let originalSides = 1;
-let printSides = 1;
-let separator = false;
-let separatorSource = null;
-
-function setValues() {
-	console.log("inside setValues function");
-	copies = document.getElementById("copynumber").value;
-    
-    if (document.getElementById("bin-a").checked) {
-        paperSource = "A";
-    } else if (document.getElementById("bin-b").checked) {
-        paperSource = "B";
-    } else {
-        paperSource = "C";
-    }
-
-    if (document.getElementById("orig-1").checked) {
-        originalSides = 1;
-    } else {
-        originalSides = 2;
-    }
-
-    if (document.getElementById("final-1").checked) {
-        printSides = 1;
-    } else {
-        printSides = 2;
-    }
-    
-    if (separator) {
-        if (document.getElementById("sep-a").checked) {
-            separatorSource = "A";
-        } else if (document.getElementById("sep-b").checked) {
-            separatorSource = "B";
-        } else {
-            separatorSource = "C";
-        }
-    }
-}
-
 function reviewBox() {
 	console.log("inside reviewBox building function");
-	params = window.location.href.split("?")[1].split("&");
-	console.log(params);
+    urlParams = new URLSearchParams(window.location.search);
+    console.log(urlParams);
 	var div = document.getElementById("numCopies");
-    if (copies == 1) {
-        div.innerHTML = "1 Copy";
+    if (typeof(sessionStorage.getItem("numCopies")) == "number") {
+        div.innerHTML = sessionStorage.getItem("numCopies") + " Copies";
     } else {
-        div.innerHTML = copies + " Copies";
+        div.innerHTML = "1 Copy";
     }
-
     div = document.getElementById("paperSource");
-    div.innerHTML = "Bin " + paperSource;
-
+    div.innerHTML = "Bin " + urlParams.get("paper-source");
     div = document.getElementById("sides");
-    div.innerHTML = originalSides + " Sided &rarr;" + printSides + " Sided";
-
+    div.innerHTML = urlParams.get("side-orig") + " Sided &rarr;" + urlParams.get("side-final") + " Sided";
     div = document.getElementById("separator");
-    if (separator) {
-        div.innerHTML = "Bin " + separatorSource + " Separator";
+    if (urlParams.get("separator-page") == "yes") {
+        div.innerHTML = "Bin " + urlParams.get("from-bin") + " Separator";
     } else {
         div.innerHTML = "No Separator";
     }
@@ -84,7 +40,6 @@ function enableSeparator() {
 			b.disabled = false;
 		}
 	}
-	separator = true;
 }
 
 function disableSeparator() {
@@ -102,5 +57,4 @@ function disableSeparator() {
 			b.checked = false;
 		}
 	}
-	separator = false;
 }

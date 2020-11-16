@@ -17,7 +17,7 @@
   		<div class="options-box">
   			<h3>Number of Copies</h3><br>
   			<div id="copies" style="background-color: #fcfdff;">
-					<button id="copynumber" type="button" class="copy-num" onclick=makeKeypad()>0</button>
+					<button id="copynumber" type="button" class="copy-num" onclick=makeKeypad()>1</button>
 				</div>
   		</div>
   		<div class="options-box">
@@ -34,14 +34,14 @@
   			</div>
   		</div>
   		<div class="options-box">
-  			<h3>From Bin</h3>
+  			<h3>Separator Source</h3>
   			<div class="options-box-subA">
   				<div class="radio-toolbar">
-	  				<input type="radio" id="sep-a" name="from-bin" value="sep-a" disabled>
+	  				<input type="radio" id="sep-a" name="from-bin" value="A" disabled>
 	  				<label for="sep-a">Bin A</label><br>
-	  				<input type="radio" id="sep-b" name="from-bin" value="sep-b" disabled>
+	  				<input type="radio" id="sep-b" name="from-bin" value="B" disabled>
 	  				<label for="sep-b">Bin B</label><br>
-	  				<input type="radio" id="sep-c" name="from-bin" value="sep-c" disabled>
+	  				<input type="radio" id="sep-c" name="from-bin" value="C" disabled>
 	  				<label for="sep-c">Bin C</label><br>
 	  			</div>
 	  		</div>
@@ -52,11 +52,11 @@
   			<h3>Paper Source</h3>
   			<div class="options-box-subA">
   				<div class="radio-toolbar">
-	  				<input type="radio" id="bin-a" name="paper-source" value="bin-a" checked>
+	  				<input type="radio" id="bin-a" name="paper-source" value="A" checked>
 	  				<label for="bin-a">Bin A</label>
-	  				<input type="radio" id="bin-b" name="paper-source" value="bin-b">
+	  				<input type="radio" id="bin-b" name="paper-source" value="B">
 	  				<label for="bin-b">Bin B</label>
-	  				<input type="radio" id="bin-c" name="paper-source" value="bin-c">
+	  				<input type="radio" id="bin-c" name="paper-source" value="C">
 	  				<label for="bin-c">Bin C</label>
 	  			</div>
   		  </div>
@@ -67,7 +67,7 @@
 	  			<div class="options-box-subB">
 	  				<h4>Original</h4>
 	  				<div class="radio-toolbar">
-		  				<input type="radio" id="orig-1" name="side-orig" value="1">
+		  				<input type="radio" id="orig-1" name="side-orig" value="1" checked>
 		  				<label style="font-size: 14px;" for="orig-1">One Sided</label>
 		  				<input type="radio" id="orig-2" name="side-orig" value="2">
 		  				<label style="font-size: 14px;" for="orig-2">Two Sided</label>		
@@ -76,7 +76,7 @@
 	  			<div class="options-box-subB">
 	  				<h4>Final</h4>
 	  				<div class="radio-toolbar">
-		  				<input type="radio" id="final-1" name="side-final" value="1">
+		  				<input type="radio" id="final-1" name="side-final" value="1" checked>
 		  				<label style="font-size: 14px;" for="final-1">One Sided</label>
 		  				<input type="radio" id="final-2" name="side-final" value="2">
 		  				<label style="font-size: 14px;" for="final-2">Two Sided</label>
@@ -84,7 +84,7 @@
 	  			</div>
 	  		</div>
   		</div>
-      <button class="next-button" onclick="setValues()">Next</button></a>
+      <button class="next-button">Next</button></a>
 	  </div>
   </form>
 	<script>
@@ -107,6 +107,7 @@
 		function enterNum(num) {
 			document.getElementById("copies").innerHTML = "<button id='copynumber' type='button' class='copy-num' onclick=makeKeypad()></button>"
 			document.getElementById("copynumber").innerHTML = number;
+			sessionStorage.setItem("numCopies", num);
 		}
 	</script>
 </body>
