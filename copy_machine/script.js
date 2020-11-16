@@ -35,70 +35,64 @@ function changeBrightness(percent) {
     return
 }
 
-var settings = {
-    copies: 1,
-    paperSource: "A",
-    originalSides: 1,
-    printSides: 1,
-    separator: false,
-    separatorSource: null
-}
-
-function setValue(attribute, value) {
-    settings[attribute] = value;
-}
+var copies = 1;
+var paperSource = "A";
+var originalSides = 1;
+var printSides = 1;
+var separator = false;
+var separatorSource = null;
 
 function setValues() {
-    settings[copies] = document.getElementById("copynumber").value;
+    copies = document.getElementById("copynumber").value;
     
     if (document.getElementById("bin-a").checked) {
-        settings[paperSource] = "A";
+        paperSource = "A";
     } else if (document.getElementById("bin-b").checked) {
-        settings[paperSource] = "B";
+        paperSource = "B";
     } else {
-        settings[paperSource] = "C";
+        paperSource = "C";
     }
 
     if (document.getElementById("orig-1").checked) {
-        settings[originalSides] = 1;
+        originalSides = 1;
     } else {
-        settings[originalSides] = 2;
+        originalSides = 2;
     }
 
     if (document.getElementById("final-1").checked) {
-        settings[printSides] = 1;
+        printSides = 1;
     } else {
-        settings[printSides] = 2;
+        printSides = 2;
     }
     
-    if (settings[separator]) {
+    if (separator) {
         if (document.getElementById("sep-a").checked) {
-            settings[separatorSource] = "A";
+            separatorSource = "A";
         } else if (document.getElementById("sep-b").checked) {
-            settings[separatorSource] = "B";
+            separatorSource = "B";
         } else {
-            settings[separatorSource] = "C";
+            separatorSource = "C";
         }
     }
 }
 
 function reviewBox() {
     var div = document.getElementById("numCopies");
-    if (settings.copies == 1) {
+    if (copies == 1) {
         div.innerHTML = "1 Copy";
     } else {
-        div.innerHTML = settings.copies + " Copies";
+        div.innerHTML = copies + " Copies";
     }
 
     div = document.getElementById("paperSource");
-    div.innerHTML = "Bin " + settings.paperSource;
+    div.innerHTML = "Bin " + paperSource;
 
     div = document.getElementById("sides");
-    div.innerHTML = settings.originalSides + " Sided &rarr;" + settings.printSides + " Sided";
+    div.innerHTML = originalSides + " Sided &rarr;" + printSides + " Sided";
 
     div = document.getElementById("separator");
-    if (settings.separator) {
-        div.innerHTML = "Bin " + settings.separatorSource + " Separator";
+    if (separator) {
+        div.innerHTML = "Bin " + separatorSource + " Separator";
     } else {
         div.innerHTML = "No Separator";
     }
@@ -117,7 +111,7 @@ function enableSeparator() {
 			b.disabled = false;
 		}
 	}
-	setValue("separator", true);
+	separator = true;
 }
 
 function disableSeparator() {
@@ -134,9 +128,5 @@ function disableSeparator() {
 			b.checked = false;
 		}
 	}
-	setValue("separator", false);
-}
-
-function setValuesWrapper() {
-	setValues();
+	separator = false;
 }
