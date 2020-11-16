@@ -8,7 +8,7 @@ function reviewBox() {
 	console.log("inside reviewBox building function");
     urlParams = new URLSearchParams(window.location.search);
     console.log(urlParams);
-	var div = document.getElementById("copynumber");
+	var div = document.getElementById("numCopies");
     if (sessionStorage.getItem("copynumber") != null) {
         div.innerHTML = "<h2>" + sessionStorage.getItem("copynumber") + " Copies</h2>";
     } else {
