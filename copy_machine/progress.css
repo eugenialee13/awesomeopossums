@@ -1,0 +1,75 @@
+.rectangle {
+  height: 559px;
+  width: 794px;
+  border-style: solid;
+  align-items: center;
+  justify-content: center;
+}
+
+.rect_third {
+  height: 22%;
+  width: 750px;
+  display: flex;
+}
+
+.rect_bottom {
+  height: 20%;
+  width: 750px;
+}
+
+.cancel {
+  background-color:  #fcfdff;
+  border: solid #8d93ab;
+  color: #393b44;
+  height: 100px;
+  width: 200px;
+  float: right;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  font-size: 35px;
+}
+
+/* Used code template from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_progressbar_label_js */
+
+#myBar {
+  width: 10%;
+  height: 30px;
+  background-color: #4CAF50;
+  text-align: center;
+  margin-left: 5%;
+  line-height: 30px;
+  color: white;
+}
+
+/* End code template */
+
+html, body {
+  height: 100%
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color:white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color:#393b44;
+  font-size: 50px;
+  text-align: center;
+  margin-left: 50px;
+}
+
+h2 {
+  color: #5c5f6e;
+  text-align: center;
+}
+
+div {
+  background-color: #f1f3f8;
+}

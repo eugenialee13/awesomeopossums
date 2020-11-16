@@ -1,0 +1,56 @@
+<!-- Used code template from
+  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_progressbar_label_js -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="progress.css">
+  <title>Copy Machine Interface</title>
+</head>
+
+<body>
+  <main>
+    <div class="rectangle">
+      <div class="rect_third">
+      </div>
+      <div class="rect_third">
+        <h1>Copying...</h1>
+      </div>
+      <div class="rect_third">
+        <div id="myBar">10%</div>
+        <!-- Used code template from link above -->
+        <script>
+          var i = 0;
+          function move() {
+            if (i == 0) {
+              i = 1;
+              var elem = document.getElementById("myBar");
+              var width = 10;
+
+              /* TODO: CHANGE THE NUMBER 50 BASED ON NUMBER OF COPIES */
+
+              var id = setInterval(frame, 50);
+              function frame() {
+                if (width >= 100) {
+                  clearInterval(id);
+                  i = 0;
+                  window.location = "complete.html";
+                } else {
+                  width++;
+                  elem.style.width = width + "%";
+                  elem.innerHTML = width + "%";
+                }
+              }
+            }
+          }
+          move();
+        </script>
+        <!-- End code template -->
+      </div>
+      <div class="rect_bottom">
+        <a href="options.html"><button type="nextpage" class="cancel">Cancel</button></a>
+      </div>
+    </div>
+  </main>
+</body>
