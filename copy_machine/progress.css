@@ -31,6 +31,20 @@
   font-size: 35px;
 }
 
+.done {
+  background-color:  #fcfdff;
+  border: solid #8d93ab;
+  color: #393b44;
+  height: 200px;
+  width: 300px;
+  float: right;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  font-size: 35px;
+}
+
 /* Used code template from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_progressbar_label_js */
 
 #myBar {
