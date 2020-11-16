@@ -16,6 +16,40 @@ function setValue(attribute, value) {
     settings[attribute] = value;
 }
 
+function setValues() {
+    settings[copies] = doccument.getElementById("copynumber").value;
+    
+    if (doccument.getElementById("bin-a").checked) {
+        settings[paperSource] = "A";
+    } else if (doccument.getElementById("bin-b").checked) {
+        settings[paperSource] = "B";
+    } else {
+        settings[paperSource] = "C";
+    }
+
+    if (doccument.getElementById("orig-1").checked) {
+        settings[originalSides] = 1;
+    } else {
+        settings[originalSides] = 2;
+    }
+
+    if (doccument.getElementById("final-1").checked) {
+        settings[printSides] = 1;
+    } else {
+        settings[printSides] = 2;
+    }
+    
+    if (settings[separator]) {
+        if (doccument.getElementById("sep-a").checked) {
+            settings[separatorSource] = "A";
+        } else if (doccument.getElementById("sep-b").checked) {
+            settings[separatorSource] = "B";
+        } else {
+            settings[separatorSource] = "C";
+        }
+    }
+}
+
 function reviewBox() {
     var div = document.getElementById("numCopies");
     if (settings.copies == 1) {

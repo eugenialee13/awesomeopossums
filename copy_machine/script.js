@@ -30,6 +30,8 @@
 //   }
 // }
 
+import { setValue, setValues } from 'confirmationBackend.js';
+
 function enableSeparator() {
 	var checkYes = document.getElementById("yes");
 	if (checkYes.checked) {
@@ -43,6 +45,7 @@ function enableSeparator() {
 			b.disabled = false;
 		}
 	}
+	setValue("separator", true);
 }
 
 function disableSeparator() {
@@ -59,5 +62,9 @@ function disableSeparator() {
 			b.checked = false;
 		}
 	}
+	setValue("separator", false);
 }
 
+function setValuesWrapper() {
+	setValues();
+}
