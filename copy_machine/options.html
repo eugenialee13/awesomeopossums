@@ -12,8 +12,9 @@
   	<div class="options-row">
   		<div class="options-box">
   			<h3>Number of Copies</h3>
-  			<input type="number" id="num-copies" name="num-copies" min="1" 
-  			placeholder="1">
+  			<div id="copies">
+				<button type="button" onclick=makeKeypad()>0</button>
+			</div>
   		</div>
   		<div class="options-box">
   			<h3>Separator Page</h3>
@@ -80,4 +81,9 @@
       <button class="next-button">Next</button></a>
 	  </div>
   </form>
+	<script>
+		function makeKeypad() {
+			document.getElementById(“copies”).innerHTML = "<div style = ‘width: 100%; display: table;’><div style=‘display: table-row; height: 100px;’><button type=‘botton’ class=‘keypadbutt’ onclick=buttonPress(1)>1</button><button type=‘botton’ class=‘keypadbutt’ onclick=buttonPress(2)>2</button><button type=‘botton’ class=‘keypadbutt’ onclick=buttonPress(3)>3</button></div><div style=‘display: table-row; height: 100px;’><button type=‘botton’ class=‘keypadbutt’ onclick=buttonPress(4)>4</button><button type=‘botton’ class=‘keypadbutt’ onclick=buttonPress(5)>5</button><button type=‘botton’ class=‘keypadbutt’ onclick=buttonPress(6)>6</button></div><div style=‘display: table-row; height: 100px;’><button type=‘botton’ class=‘keypadbutt’ onclick=buttonPress(7)>7</button><button type=‘botton’ class=‘keypadbutt’ onclick=buttonPress(8)>8</button><button type=‘botton’ class=‘keypadbutt’ onclick=buttonPress(9)>9</button></div><div style=‘display: table-row; height: 100px;’><button type=‘botton’ class=‘keypadbutt’ onclick=buttonPress(0)>0</button><button type=‘botton’ class=‘keypadbutt’ onclick=buttonPress(-1)><-</button><button type=‘botton’ class=‘keypadbutt’ onclick=buttonPress(-2)>ENTER</button></div>";
+		}
+	</script>
 </body>
