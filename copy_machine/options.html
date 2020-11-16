@@ -20,10 +20,12 @@
   			<h3>Separator Page</h3>
   			<div class="options-box-subA">
   				<div class="radio-toolbar">
-	  				<input type="radio" id="yes" name="separator-page" value="yes">
+	  				<input type="radio" id="yes" name="separator-page" value="yes"
+	  				onclick="enableSeparator()">
 	  				<label for="yes">Yes</label>
-	  				<input type="radio" id="no" name="separator-page" value="no" checked>
-		  			<label for="no" id="no">No</label>	
+	  				<input type="radio" id="no" name="separator-page" value="no" 
+	  				onclick="disableSeparator()" checked>
+		  			<label for="no" id="no-label">No</label>	
 		  		</div>
   			</div>
   		</div>
