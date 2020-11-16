@@ -35,12 +35,12 @@ function changeBrightness(percent) {
     return
 }
 
-copies = 1;
-paperSource = "A";
-originalSides = 1;
-printSides = 1;
-separator = false;
-separatorSource = null;
+var copies = 1;
+var paperSource = "A";
+let originalSides = 1;
+let printSides = 1;
+let separator = false;
+let separatorSource = null;
 
 function setValues() {
 	console.log("inside setValues function");
@@ -79,8 +79,9 @@ function setValues() {
 
 function reviewBox() {
 	console.log("inside reviewBox building function");
-	console.log("separator:" + separator);
-    var div = document.getElementById("numCopies");
+	params = window.location.href.split("?")[1].split("&");
+	console.log(params);
+	var div = document.getElementById("numCopies");
     if (copies == 1) {
         div.innerHTML = "1 Copy";
     } else {
