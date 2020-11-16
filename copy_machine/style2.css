@@ -1,18 +1,60 @@
 .screen {
-  height: 600px;
-  width: 900px;
+  height: 559px;
+  width: 794px;
   border-style: solid;
-  background-color: #f1f3f8;
+  display: inline-flex;
+}
+
+.rect_right {
+  width: 516px;
+  height: 100%;
+  display: inline;
+  align-items: center;
+  justify-content: right;
+}
+
+.rect_left {
+  width: 278px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm {
+  width: 95%;
+  height: 400px;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm-row {
+  width: 100%;
+  height: 23%;
+  border: solid #8d93ab;
+}
+
+.next {
+  background-color:  #fcfdff;
+  border: solid #8d93ab;
+  color: #393b44;
+  height: 150px;
+  width: 400px;
+  margin-left: 3px;
+  margin-right: 2px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 35px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .preview {
-  position: relative;
-  top: 50px;
-  left: 450px;
-  height: 300px;
+  margin-top: 15px;
+  height: 60%;
   width: 450px;
-  border: 2px double black;
-  background-color: white;
+  float:right;
 }
 
 #image {
@@ -23,11 +65,49 @@
 }
 
 .submit {
-  position: relative;
-  top: 50px;
-  left: 450px;
-  height: 300px;
+  height: 30%;
   width: 450px;
-  border: 2px double black;
-  background-color: white;
+  float: right;
+}
+
+div {
+  background-color: #f1f3f8;
+}
+
+html, body {
+  height: 100%
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color:white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color:#393b44;
+  font-size: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  color: #5c5f6e;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 5px;
+}
+
+h4 {
+  margin: 0;
 }
