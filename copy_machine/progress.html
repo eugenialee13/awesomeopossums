@@ -18,7 +18,7 @@
         <h1>Copying...</h1>
       </div>
       <div class="rect_third">
-        <div id="myBar">10%</div>
+        <div id="myBar">1%</div>
         <!-- Used code template from link above -->
         <script>
           var i = 0;
@@ -26,11 +26,12 @@
             if (i == 0) {
               i = 1;
               var elem = document.getElementById("myBar");
-              var width = 10;
+              var width = 1;
+              var numcopies = sessionStorage.getItem("numCopies");
 
               /* TODO: CHANGE THE NUMBER 50 BASED ON NUMBER OF COPIES */
 
-              var id = setInterval(frame, 50);
+              var id = setInterval(frame, numcopies*1);
               function frame() {
                 if (width >= 100) {
                   clearInterval(id);
@@ -49,7 +50,7 @@
         <!-- End code template -->
       </div>
       <div class="rect_bottom">
-        <a href="options.html"><button type="nextpage" class="cancel">Cancel</button></a>
+        <a href="confirmationpage.html"><button type="nextpage" class="cancel">Cancel</button></a>
       </div>
     </div>
   </main>
