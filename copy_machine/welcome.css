@@ -38,7 +38,7 @@
   margin-left: 3px;
   margin-right: 2px;
   text-align: center;
-  text-decoration: none;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 35px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -68,8 +68,8 @@
   margin-left: 3px;
   margin-right: 2px;
   text-align: center;
-  text-decoration: none;
   cursor: pointer;
+  border-radius: 5px;
   font-size: 35px;
 }
 /* End formatting keypad */
