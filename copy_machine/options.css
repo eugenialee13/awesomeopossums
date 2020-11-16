@@ -59,6 +59,38 @@ label {
   cursor: pointer;
 }
 
+.table_row {
+  background-color: #d6e0f0;
+  height: 50px;
+  margin: 3px;
+  display: table;
+  justify-content: center;
+  float: right;
+}
+
+.pad {
+  margin-top: 25px;
+  position: relative;
+  width: 237px;
+  background-color: #d6e0f0;
+  border: solid #8d93ab;
+  display: table;
+}
+
+.keypadbtn {
+  background-color:  #fcfdff;
+  border: solid #8d93ab;
+  color: #393b44;
+  height: 55px;
+  width: 70px;
+  margin-left: 3px;
+  margin-right: 2px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
 .rectangle {
   height: 559px;
   width: 794px;
@@ -175,18 +207,18 @@ label {
     margin: 5px;
 }
 
-.radio-toolbar label:hover {
+/* .radio-toolbar label:hover {
   background-color: #dfd;
-}
+} */
 
 .radio-toolbar input[type="radio"]:checked + label {
     background-color: #bfb;
     border-color: #4c4;
 }
 
-#no-label:hover {
+/* #no-label:hover {
   background-color: #fdd;
-}
+} */
 
 #no:checked + label {
     background-color: #fbb;
