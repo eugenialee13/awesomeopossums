@@ -13,7 +13,7 @@
   		<div class="options-box">
   			<h3>Number of Copies</h3>
   			<div id="copies">
-				<button type="button" onclick=makeKeypad()>0</button>
+				<button id="copynumber" type="button" onclick=makeKeypad()>0</button>
 			</div>
   		</div>
   		<div class="options-box">
@@ -96,6 +96,10 @@
 				number = (number * 10) + num;
 				document.getElementById("numdisplay").innerHTML = number;
 			}
+		}
+		function enterNum(num) {
+			document.getElementById("numdisplay").innerHTML = "<button id='copynumber' type='button' onclick=makeKeypad()></button>"
+			document.getElementById("copynumber").innerHTML = number;
 		}
 	</script>
 </body>
