@@ -31,6 +31,9 @@ h2 {
 
 h3 {
   text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 5px;
 }
 
 h4 {
@@ -65,6 +68,20 @@ label {
   flex-wrap: wrap;
 }
 
+.copy-num {
+  font-family: inherit;
+  background-color: white;
+  border: solid #8d93ab;
+  color: #393b44;
+  height: 100px;
+  width: 125px;
+  margin: 0 20px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 35px;
+}
+
 .options-row {
   width: 100%;
   display: flex;
@@ -73,18 +90,20 @@ label {
 }
 
 .options-box {
-  height: 80%;
-  width: 28%;
-  background-color: white;
+  height: 90%;
+  width: 30%;
+  background-color: #fcfdff;
   display: flex;
+  border-radius: 4px;
+  border-color: #f0f0f1 ;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .options-box-subA {
-  background-color: white;
+  background-color:#fcfdff;
   max-height: inherit;
-  height: 80%;
+  height: 140px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -95,7 +114,7 @@ label {
 .options-box-subB {
   height: 100%;
   width: 50%;
-  background-color: white;
+  background-color: #fcfdff;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -103,23 +122,24 @@ label {
 
 .next-button {
   background-color:  #fcfdff;
+  font-family: inherit;
   border: solid #8d93ab;
   color: #393b44;
   height: 100px;
   width: 200px;
-  margin-left: 3px;
-  margin-right: 2px;
+  margin: 0 20px;
   text-align: center;
-  text-decoration: none;
+  border-radius: 4px;
   cursor: pointer;
   font-size: 35px;
 }
 
 .back-button {
+  font-family: inherit;
   background-color:  #fcfdff;
   border: solid #8d93ab;
   color: #393b44;
-  height: 50px;
+  height: 40px;
   width: 75px;
   text-align: center;
   cursor: pointer;
@@ -129,8 +149,10 @@ label {
 }
 
 .radio-toolbar {
-  background-color: white;
+  background-color:#fcfdff;
   margin: 10px;
+  max-height: 140px;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

@@ -9,16 +9,16 @@
 
 <body>
   <form action="confirmationpage.html" method="get" class="rectangle">
-  	<div class="options-row" style="justify-content: space-between;">
+  	<div class="options-row" style="height: 50px; justify-content: space-between;">
   		<button type="button" class="back-button" onclick="location.href='welcome.html';">Back</button>
   		<button type="button" class="back-button" onclick="location.href='welcome.html';">Logout</button>
   	</div>
-  	<div class="options-row">
+  	<div class="options-row" style="height: 45.5%;">
   		<div class="options-box">
   			<h3>Number of Copies</h3><br>
-  			<div id="copies">
-				<button id="copynumber" type="button" onclick=makeKeypad()>0</button>
-			</div>
+  			<div id="copies" style="background-color: #fcfdff;">
+					<button id="copynumber" type="button" class="copy-num" onclick=makeKeypad()>0</button>
+				</div>
   		</div>
   		<div class="options-box">
   			<h3>Separator Page</h3>
@@ -26,10 +26,10 @@
   				<div class="radio-toolbar">
 	  				<input type="radio" id="yes" name="separator-page" value="yes"
 	  				onclick="enableSeparator()">
-	  				<label for="yes">Yes</label>
+	  				<label style="height:50px; width: 75px; padding:15px 22px;" for="yes">Yes</label>
 	  				<input type="radio" id="no" name="separator-page" value="no" 
 	  				onclick="disableSeparator()" checked>
-		  			<label for="no" id="no-label">No</label>	
+		  			<label style="height:50px; width: 75px; padding:15px 25px;" for="no" id="no-label">No</label>	
 		  		</div>
   			</div>
   		</div>
@@ -47,7 +47,7 @@
 	  		</div>
   		</div>
   	</div>
-  	<div class="options-row">
+  	<div class="options-row" style="height: 45.5%;">
   		<div class="options-box">
   			<h3>Paper Source</h3>
   			<div class="options-box-subA">
@@ -59,7 +59,7 @@
 	  				<input type="radio" id="bin-c" name="paper-source" value="bin-c">
 	  				<label for="bin-c">Bin C</label>
 	  			</div>
-  		</div>
+  		  </div>
   		</div>
   		<div class="options-box">
   			<h3>Sides</h3>
@@ -68,18 +68,18 @@
 	  				<h4>Original</h4>
 	  				<div class="radio-toolbar">
 		  				<input type="radio" id="orig-1" name="side-orig" value="1">
-		  				<label for="orig-1">One Sided</label>
+		  				<label style="font-size: 14px;" for="orig-1">One Sided</label>
 		  				<input type="radio" id="orig-2" name="side-orig" value="2">
-		  				<label for="orig-2">Two Sided</label>		
+		  				<label style="font-size: 14px;" for="orig-2">Two Sided</label>		
 		  			</div>
 	  			</div>
 	  			<div class="options-box-subB">
 	  				<h4>Final</h4>
 	  				<div class="radio-toolbar">
 		  				<input type="radio" id="final-1" name="side-final" value="1">
-		  				<label for="final-1">One Sided</label>
+		  				<label style="font-size: 14px;" for="final-1">One Sided</label>
 		  				<input type="radio" id="final-2" name="side-final" value="2">
-		  				<label for="final-2">Two Sided</label>
+		  				<label style="font-size: 14px;" for="final-2">Two Sided</label>
 	  				</div>
 	  			</div>
 	  		</div>
